@@ -1,0 +1,70 @@
+afrah@polaris-login-04:~/ai-science-training-series> pip install wandb
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: wandb in /home/afrah/.local/lib/python3.6/site-packages (0.15.12)
+Requirement already satisfied: PyYAML in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (6.0.1)
+Requirement already satisfied: psutil>=5.0.0 in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (5.9.8)
+Requirement already satisfied: setuptools in /usr/lib/python3.6/site-packages (from wandb) (40.5.0)
+Requirement already satisfied: appdirs>=1.4.3 in /usr/lib/python3.6/site-packages (from wandb) (1.4.3)
+Requirement already satisfied: typing-extensions; python_version < "3.10" in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (4.1.1)
+Requirement already satisfied: GitPython!=3.1.29,>=1.0.0 in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (3.1.18)
+Requirement already satisfied: Click!=8.0.0,>=7.1 in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (8.0.4)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (0.4.0)
+Requirement already satisfied: pathtools in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (0.1.2)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.12.0; python_version < "3.9" and sys_platform == "linux" in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (3.19.6)
+Requirement already satisfied: setproctitle in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (1.2.3)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /home/afrah/.local/lib/python3.6/site-packages (from wandb) (1.44.1)
+Requirement already satisfied: requests<3,>=2.0.0 in /usr/lib/python3.6/site-packages (from wandb) (2.27.1)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /home/afrah/.local/lib/python3.6/site-packages (from GitPython!=3.1.29,>=1.0.0->wandb) (4.0.9)
+Requirement already satisfied: importlib-metadata; python_version < "3.8" in /home/afrah/.local/lib/python3.6/site-packages (from Click!=8.0.0,>=7.1->wandb) (4.8.3)
+Requirement already satisfied: six>=1.4.0 in /usr/lib/python3.6/site-packages (from docker-pycreds>=0.4.0->wandb) (1.14.0)
+Requirement already satisfied: certifi in /usr/lib/python3.6/site-packages (from sentry-sdk>=1.0.0->wandb) (2021.10.8)
+Requirement already satisfied: urllib3>=1.26.11; python_version >= "3.6" in /home/afrah/.local/lib/python3.6/site-packages (from sentry-sdk>=1.0.0->wandb) (1.26.18)
+Requirement already satisfied: idna<4,>=2.5; python_version >= "3" in /usr/lib/python3.6/site-packages (from requests<3,>=2.0.0->wandb) (3.3)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in /usr/lib/python3.6/site-packages (from requests<3,>=2.0.0->wandb) (2.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in /home/afrah/.local/lib/python3.6/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb) (5.0.0)
+Requirement already satisfied: zipp>=0.5 in /home/afrah/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->Click!=8.0.0,>=7.1->wandb) (3.6.0)
+
+afrah@polaris-login-04:~/ai-science-training-series> wandb login
+AttributeError: module 'wandb' has no attribute 'apis'
+
+
+afrah@polaris-login-04:~/ai-science-training-series> pip install wandb==0.15.11
+Defaulting to user installation because normal site-packages is not writeable
+Collecting wandb==0.15.11
+  Downloading wandb-0.15.11-py3-none-any.whl (2.1 MB)
+     |████████████████████████████████| 2.1 MB 2.2 MB/s 
+Requirement already satisfied: PyYAML in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (6.0.1)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.12.0; python_version < "3.9" and sys_platform == "linux" in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (3.19.6)
+Requirement already satisfied: appdirs>=1.4.3 in /usr/lib/python3.6/site-packages (from wandb==0.15.11) (1.4.3)
+Requirement already satisfied: psutil>=5.0.0 in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (5.9.8)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (1.44.1)
+Requirement already satisfied: pathtools in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (0.1.2)
+Requirement already satisfied: setproctitle in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (1.2.3)
+Requirement already satisfied: setuptools in /usr/lib/python3.6/site-packages (from wandb==0.15.11) (40.5.0)
+Requirement already satisfied: requests<3,>=2.0.0 in /usr/lib/python3.6/site-packages (from wandb==0.15.11) (2.27.1)
+Requirement already satisfied: typing-extensions; python_version < "3.10" in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (4.1.1)
+Requirement already satisfied: Click!=8.0.0,>=7.1 in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (8.0.4)
+Requirement already satisfied: GitPython!=3.1.29,>=1.0.0 in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (3.1.18)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /home/afrah/.local/lib/python3.6/site-packages (from wandb==0.15.11) (0.4.0)
+Requirement already satisfied: urllib3>=1.26.11; python_version >= "3.6" in /home/afrah/.local/lib/python3.6/site-packages (from sentry-sdk>=1.0.0->wandb==0.15.11) (1.26.18)
+Requirement already satisfied: certifi in /usr/lib/python3.6/site-packages (from sentry-sdk>=1.0.0->wandb==0.15.11) (2021.10.8)
+Requirement already satisfied: charset-normalizer~=2.0.0; python_version >= "3" in /usr/lib/python3.6/site-packages (from requests<3,>=2.0.0->wandb==0.15.11) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5; python_version >= "3" in /usr/lib/python3.6/site-packages (from requests<3,>=2.0.0->wandb==0.15.11) (3.3)
+Requirement already satisfied: importlib-metadata; python_version < "3.8" in /home/afrah/.local/lib/python3.6/site-packages (from Click!=8.0.0,>=7.1->wandb==0.15.11) (4.8.3)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /home/afrah/.local/lib/python3.6/site-packages (from GitPython!=3.1.29,>=1.0.0->wandb==0.15.11) (4.0.9)
+Requirement already satisfied: six>=1.4.0 in /usr/lib/python3.6/site-packages (from docker-pycreds>=0.4.0->wandb==0.15.11) (1.14.0)
+Requirement already satisfied: zipp>=0.5 in /home/afrah/.local/lib/python3.6/site-packages (from importlib-metadata; python_version < "3.8"->Click!=8.0.0,>=7.1->wandb==0.15.11) (3.6.0)
+Requirement already satisfied: smmap<6,>=3.0.1 in /home/afrah/.local/lib/python3.6/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb==0.15.11) (5.0.0)
+Installing collected packages: wandb
+  Attempting uninstall: wandb
+    Found existing installation: wandb 0.15.12
+    Uninstalling wandb-0.15.12:
+      Successfully uninstalled wandb-0.15.12
+Successfully installed wandb-0.15.11
+
+afrah@polaris-login-04:~/ai-science-training-series> wandb login 
+wandb: Logging into wandb.ai. (Learn how to deploy a W&B server locally: https://wandb.me/wandb-server)
+wandb: You can find your API key in your browser here: https://wandb.ai/authorize
+wandb: Paste an API key from your profile and hit enter, or press ctrl+c to quit: 
+wandb: Appending key for api.wandb.ai to your netrc file: /home/afrah/.netrc
+

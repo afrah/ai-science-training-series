@@ -1,0 +1,791 @@
+afrah@polaris-login-04:~/ai-science-training-series> pwd
+/home/afrah/ai-science-training-series
+afrah@polaris-login-04:~/ai-science-training-series>  qsub -A ALCFAITP -q debug -l select=2 -l walltime=01:00:00,filesystems=eagle:home -I
+qsub: waiting for job 1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov to start
+qsub: job 1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov ready
+
+afrah@x3004c0s31b0n0:~> 
+afrah@x3004c0s31b0n0:~> module load conda/2023-10-04
+afrah@x3004c0s31b0n0:~> conda activate base 
+(2023-10-04/base) afrah@x3004c0s31b0n0:~> 
+(2023-10-04/base) afrah@x3004c0s31b0n0:~> git clone https://github.com/saforem2/wordplay 
+Cloning into 'wordplay'...
+remote: Enumerating objects: 798, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 798 (delta 0), reused 0 (delta 0), pack-reused 797
+Receiving objects: 100% (798/798), 14.33 MiB | 46.59 MiB/s, done.
+Resolving deltas: 100% (366/366), done.
+(2023-10-04/base) afrah@x3004c0s31b0n0:~> 
+(2023-10-04/base) afrah@x3004c0s31b0n0:~> cd wordplay
+(2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> 
+
+(2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> mkdir -p venvs/polaris/2023-10-04
+(2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> python3 -m venv venvs/polaris/2023-10-04 --system-site-packages
+(2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> 
+(2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> source venvs/polaris/2023-10-04/bin/activate
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> 
+
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay>  python3 -m pip install -e "."
+Obtaining file:///home/afrah/wordplay
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Installing backend dependencies ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Collecting ambivalent@ git+https://github.com/saforem2/ambivalent
+  Cloning https://github.com/saforem2/ambivalent to /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-1lboohm5/ambivalent_279c0ca365e44fd1bf2df8e4b13ea659
+  Running command git clone --filter=blob:none --quiet https://github.com/saforem2/ambivalent /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-1lboohm5/ambivalent_279c0ca365e44fd1bf2df8e4b13ea659
+  Resolved https://github.com/saforem2/ambivalent to commit e130acf2ae471b2a4768dcb48e680187ce6bb716
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting ezpz@ git+https://github.com/saforem2/ezpz
+  Cloning https://github.com/saforem2/ezpz to /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-1lboohm5/ezpz_7687c5fff3cd44f999a7397857b98133
+  Running command git clone --filter=blob:none --quiet https://github.com/saforem2/ezpz /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-1lboohm5/ezpz_7687c5fff3cd44f999a7397857b98133
+  Resolved https://github.com/saforem2/ezpz to commit 33eac6d48ebe3194aadb242f3680f9985894be61
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting enrich@ git+https://github.com/saforem2/enrich
+  Cloning https://github.com/saforem2/enrich to /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-1lboohm5/enrich_1f004bdc3ed6409a94de8427b8c4cb15
+  Running command git clone --filter=blob:none --quiet https://github.com/saforem2/enrich /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-1lboohm5/enrich_1f004bdc3ed6409a94de8427b8c4cb15
+  Resolved https://github.com/saforem2/enrich to commit 7bad3a1a5bb6205ae9526af93aef6e4078241016
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Requirement already satisfied: joblib in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (1.3.2)
+Requirement already satisfied: mpi4py in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (3.1.5)
+Requirement already satisfied: tqdm in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (4.65.0)
+Requirement already satisfied: transformers in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (4.34.0)
+Requirement already satisfied: rich in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (13.6.0)
+Requirement already satisfied: wandb in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (0.15.12)
+Collecting tiktoken
+  Downloading tiktoken-0.6.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 27.0 MB/s eta 0:00:00
+Requirement already satisfied: hydra-colorlog in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (1.2.0)
+Requirement already satisfied: torch in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (2.0.1)
+Requirement already satisfied: hydra-core in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (1.3.2)
+Requirement already satisfied: datasets in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wordplay==0.0.1) (2.14.5)
+Requirement already satisfied: requests in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (2.31.0)
+Requirement already satisfied: matplotlib in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (3.8.0)
+Collecting colormaps
+  Downloading colormaps-0.4.1-py3-none-any.whl (697 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 697.8/697.8 kB 45.4 MB/s eta 0:00:00
+Requirement already satisfied: seaborn in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (0.13.0)
+Requirement already satisfied: pyarrow>=8.0.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (13.0.0)
+Requirement already satisfied: aiohttp in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (3.8.5)
+Requirement already satisfied: xxhash in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (3.3.0)
+Requirement already satisfied: numpy>=1.17 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (1.24.3)
+Requirement already satisfied: pandas in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (2.1.1)
+Requirement already satisfied: huggingface-hub<1.0.0,>=0.14.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (0.16.4)
+Requirement already satisfied: packaging in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (23.2)
+Requirement already satisfied: dill<0.3.8,>=0.3.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (0.3.7)
+Requirement already satisfied: multiprocess in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (0.70.15)
+Requirement already satisfied: pyyaml>=5.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (6.0.1)
+Requirement already satisfied: fsspec[http]<2023.9.0,>=2023.1.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from datasets->wordplay==0.0.1) (2023.6.0)
+Requirement already satisfied: omegaconf in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from enrich@ git+https://github.com/saforem2/enrich->wordplay==0.0.1) (2.3.0)
+Requirement already satisfied: jax in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz@ git+https://github.com/saforem2/ezpz->wordplay==0.0.1) (0.4.17)
+Requirement already satisfied: xarray in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz@ git+https://github.com/saforem2/ezpz->wordplay==0.0.1) (2023.9.0)
+Collecting sh
+  Downloading sh-2.0.6-py3-none-any.whl (38 kB)
+Requirement already satisfied: jaxlib in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz@ git+https://github.com/saforem2/ezpz->wordplay==0.0.1) (0.4.17+cuda11.cudnn86)
+Requirement already satisfied: jaxtyping in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz@ git+https://github.com/saforem2/ezpz->wordplay==0.0.1) (0.2.22)
+Requirement already satisfied: ml-dtypes in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz@ git+https://github.com/saforem2/ezpz->wordplay==0.0.1) (0.3.1)
+Collecting plotext
+  Downloading plotext-5.2.8-py3-none-any.whl (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.2/60.2 kB 5.8 MB/s eta 0:00:00
+Requirement already satisfied: colorlog in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from hydra-colorlog->wordplay==0.0.1) (6.7.0)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from hydra-core->wordplay==0.0.1) (4.9.3)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from rich->wordplay==0.0.1) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from rich->wordplay==0.0.1) (2.16.1)
+Requirement already satisfied: regex>=2022.1.18 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from tiktoken->wordplay==0.0.1) (2023.10.3)
+Requirement already satisfied: typing-extensions in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->wordplay==0.0.1) (4.10.0)
+Requirement already satisfied: jinja2 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->wordplay==0.0.1) (3.0.3)
+Requirement already satisfied: networkx in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->wordplay==0.0.1) (3.1)
+Requirement already satisfied: filelock in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->wordplay==0.0.1) (3.9.0)
+Requirement already satisfied: sympy in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->wordplay==0.0.1) (1.12)
+Requirement already satisfied: tokenizers<0.15,>=0.14 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from transformers->wordplay==0.0.1) (0.14.0)
+Requirement already satisfied: safetensors>=0.3.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from transformers->wordplay==0.0.1) (0.3.3)
+Requirement already satisfied: Click!=8.0.0,>=7.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (8.0.4)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (1.31.0)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (0.4.0)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.19.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (3.20.3)
+Requirement already satisfied: pathtools in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (0.1.2)
+Requirement already satisfied: appdirs>=1.4.3 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (1.4.4)
+Requirement already satisfied: psutil>=5.0.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (5.9.5)
+Requirement already satisfied: setuptools in ./venvs/polaris/2023-10-04/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (65.5.0)
+Requirement already satisfied: GitPython!=3.1.29,>=1.0.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (3.1.37)
+Requirement already satisfied: setproctitle in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->wordplay==0.0.1) (1.3.3)
+Requirement already satisfied: six>=1.4.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from docker-pycreds>=0.4.0->wandb->wordplay==0.0.1) (1.16.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from aiohttp->datasets->wordplay==0.0.1) (6.0.4)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from aiohttp->datasets->wordplay==0.0.1) (2.0.4)
+Requirement already satisfied: attrs>=17.3.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from aiohttp->datasets->wordplay==0.0.1) (23.1.0)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from aiohttp->datasets->wordplay==0.0.1) (4.0.3)
+Requirement already satisfied: yarl<2.0,>=1.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from aiohttp->datasets->wordplay==0.0.1) (1.9.2)
+Requirement already satisfied: aiosignal>=1.1.2 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from aiohttp->datasets->wordplay==0.0.1) (1.3.1)
+Requirement already satisfied: frozenlist>=1.1.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from aiohttp->datasets->wordplay==0.0.1) (1.4.0)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from GitPython!=3.1.29,>=1.0.0->wandb->wordplay==0.0.1) (4.0.10)
+Requirement already satisfied: mdurl~=0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->wordplay==0.0.1) (0.1.2)
+Requirement already satisfied: idna<4,>=2.5 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from requests->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from requests->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from requests->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (2023.7.22)
+Requirement already satisfied: opt-einsum in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jax->ezpz@ git+https://github.com/saforem2/ezpz->wordplay==0.0.1) (3.3.0)
+Requirement already satisfied: scipy>=1.7 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jax->ezpz@ git+https://github.com/saforem2/ezpz->wordplay==0.0.1) (1.11.3)
+Requirement already satisfied: typeguard>=2.13.3 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jaxtyping->ezpz@ git+https://github.com/saforem2/ezpz->wordplay==0.0.1) (2.13.3)
+Requirement already satisfied: MarkupSafe>=2.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jinja2->torch->wordplay==0.0.1) (2.1.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (3.1.1)
+Requirement already satisfied: cycler>=0.10 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (0.12.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (1.4.5)
+Requirement already satisfied: contourpy>=1.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (1.1.1)
+Requirement already satisfied: pillow>=6.2.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (10.0.1)
+Requirement already satisfied: fonttools>=4.22.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (4.43.0)
+Requirement already satisfied: python-dateutil>=2.7 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->wordplay==0.0.1) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from pandas->datasets->wordplay==0.0.1) (2023.3.post1)
+Requirement already satisfied: tzdata>=2022.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from pandas->datasets->wordplay==0.0.1) (2023.3)
+Requirement already satisfied: mpmath>=0.19 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from sympy->torch->wordplay==0.0.1) (1.3.0)
+Requirement already satisfied: smmap<6,>=3.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb->wordplay==0.0.1) (5.0.1)
+Building wheels for collected packages: wordplay, ambivalent, enrich, ezpz
+  Building editable for wordplay (pyproject.toml) ... done
+  Created wheel for wordplay: filename=wordplay-0.0.1-py3-none-any.whl size=5010 sha256=2feae77bee2d4d1b154db3f77de48ca4b68383279fdf90ce51c7c7ae7670b3f4
+  Stored in directory: /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-ephem-wheel-cache-knrxhtwx/wheels/6b/7f/a8/3f801207359f6841f8f5280da99b53269ce2071d087f98c984
+  Building wheel for ambivalent (pyproject.toml) ... done
+  Created wheel for ambivalent: filename=ambivalent-0.0.1-py3-none-any.whl size=13749 sha256=c4163744024fb7d929ac539ab2ae1b5e660e9c4118589b0d3312667b6e7ad7da
+  Stored in directory: /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-ephem-wheel-cache-knrxhtwx/wheels/7b/e6/96/887dca4e5d3c307c41d4cf84d23f97791a334efab8f1163d30
+  Building wheel for enrich (pyproject.toml) ... done
+  Created wheel for enrich: filename=enrich-0.1.dev113-py3-none-any.whl size=21483 sha256=720013bbcdd24ae8f27a486a0b27c3b63fa5fee328f8ba511fa856215edb574a
+  Stored in directory: /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-ephem-wheel-cache-knrxhtwx/wheels/6a/50/0d/e7d26a8f360bc5207ebcf74a48a7ba0fa5172c7ad9e1a979c9
+  Building wheel for ezpz (pyproject.toml) ... done
+  Created wheel for ezpz: filename=ezpz-0.0.1-py3-none-any.whl size=66529 sha256=c64b9bc8b1c1919872de1c5230ee045878f1d90e05bc9eceba8535a2f8f216a9
+  Stored in directory: /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-ephem-wheel-cache-knrxhtwx/wheels/eb/89/66/9ab50e62a2bd66fcc997952b73eb94cdb41a99455b21f42909
+Successfully built wordplay ambivalent enrich ezpz
+Installing collected packages: sh, plotext, tiktoken, enrich, colormaps, ambivalent, ezpz, wordplay
+Successfully installed ambivalent-0.0.1 colormaps-0.4.1 enrich-0.1.dev113 ezpz-0.0.1 plotext-5.2.8 sh-2.0.6 tiktoken-0.6.0 wordplay-0.0.1
+
+[notice] A new release of pip is available: 23.0.1 -> 24.0
+[notice] To update, run: pip install --upgrade pip
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> 
+git clone https://github.com/saforem2/ezpz
+Cloning into 'ezpz'...
+remote: Enumerating objects: 1224, done.
+remote: Counting objects: 100% (482/482), done.
+remote: Compressing objects: 100% (244/244), done.
+remote: Total 1224 (delta 240), reused 401 (delta 173), pack-reused 742
+Receiving objects: 100% (1224/1224), 2.14 MiB | 20.48 MiB/s, done.
+Resolving deltas: 100% (627/627), done.
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> 
+python3 -m pip install -e "ezpz[dev]"
+Obtaining file:///home/afrah/wordplay/ezpz
+  Installing build dependencies ... done
+  Checking if build backend supports build_editable ... done
+  Getting requirements to build editable ... done
+  Installing backend dependencies ... done
+  Preparing editable metadata (pyproject.toml) ... done
+Collecting ambivalent@ git+https://github.com/saforem2/ambivalent
+  Cloning https://github.com/saforem2/ambivalent to /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-vx8iha4f/ambivalent_b59c548ffc954b5f9fdd62dc47c93dab
+  Running command git clone --filter=blob:none --quiet https://github.com/saforem2/ambivalent /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-vx8iha4f/ambivalent_b59c548ffc954b5f9fdd62dc47c93dab
+  Resolved https://github.com/saforem2/ambivalent to commit e130acf2ae471b2a4768dcb48e680187ce6bb716
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting enrich@ git+https://github.com/saforem2/enrich
+  Cloning https://github.com/saforem2/enrich to /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-vx8iha4f/enrich_512cad6bc9f34872bdda3abe4df1f9c6
+  Running command git clone --filter=blob:none --quiet https://github.com/saforem2/enrich /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-vx8iha4f/enrich_512cad6bc9f34872bdda3abe4df1f9c6
+  Resolved https://github.com/saforem2/enrich to commit 7bad3a1a5bb6205ae9526af93aef6e4078241016
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Requirement already satisfied: hydra-colorlog in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (1.2.0)
+Requirement already satisfied: jax in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (0.4.17)
+Requirement already satisfied: jaxlib in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (0.4.17+cuda11.cudnn86)
+Requirement already satisfied: joblib in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (1.3.2)
+Requirement already satisfied: rich in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (13.6.0)
+Requirement already satisfied: jaxtyping in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (0.2.22)
+Requirement already satisfied: torch in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (2.0.1)
+Requirement already satisfied: wandb in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (0.15.12)
+Requirement already satisfied: xarray in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (2023.9.0)
+Requirement already satisfied: sh in ./venvs/polaris/2023-10-04/lib/python3.10/site-packages (from ezpz==0.0.1) (2.0.6)
+Requirement already satisfied: ml-dtypes in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (0.3.1)
+Requirement already satisfied: mpi4py in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (3.1.5)
+Requirement already satisfied: hydra-core in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (1.3.2)
+Requirement already satisfied: plotext in ./venvs/polaris/2023-10-04/lib/python3.10/site-packages (from ezpz==0.0.1) (5.2.8)
+Collecting pynvim
+  Downloading pynvim-0.5.0-py2.py3-none-any.whl (45 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.3/45.3 kB 1.0 MB/s eta 0:00:00
+Collecting pudb
+  Downloading pudb-2024.1.tar.gz (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.0/226.0 kB 4.8 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting neovim
+  Downloading neovim-0.3.1.tar.gz (804 bytes)
+  Preparing metadata (setup.py) ... done
+Collecting nodejs
+  Downloading nodejs-0.1.1.tar.gz (2.3 kB)
+  Preparing metadata (setup.py) ... done
+Collecting ptipython
+  Downloading ptipython-1.0.1-py2.py3-none-any.whl (1.2 kB)
+Collecting ruff
+  Downloading ruff-0.3.5-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 51.4 MB/s eta 0:00:00
+Requirement already satisfied: ipython in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ezpz==0.0.1) (8.16.1)
+Collecting pyproject-flake8
+  Downloading pyproject_flake8-6.1.0-py3-none-any.whl (5.3 kB)
+Collecting black
+  Downloading black-24.3.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 63.8 MB/s eta 0:00:00
+Collecting mypy
+  Downloading mypy-1.9.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.5/12.5 MB 75.9 MB/s eta 0:00:00
+Collecting ruff-lsp
+  Downloading ruff_lsp-0.0.53-py3-none-any.whl (20 kB)
+Requirement already satisfied: matplotlib in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (3.8.0)
+Requirement already satisfied: colormaps in ./venvs/polaris/2023-10-04/lib/python3.10/site-packages (from ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (0.4.1)
+Requirement already satisfied: requests in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (2.31.0)
+Requirement already satisfied: seaborn in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (0.13.0)
+Requirement already satisfied: platformdirs>=2 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from black->ezpz==0.0.1) (3.11.0)
+Requirement already satisfied: packaging>=22.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from black->ezpz==0.0.1) (23.2)
+Requirement already satisfied: tomli>=1.1.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from black->ezpz==0.0.1) (2.0.1)
+Collecting mypy-extensions>=0.4.3
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Requirement already satisfied: typing-extensions>=4.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from black->ezpz==0.0.1) (4.10.0)
+Collecting pathspec>=0.9.0
+  Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+Requirement already satisfied: click>=8.0.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from black->ezpz==0.0.1) (8.0.4)
+Requirement already satisfied: omegaconf in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from enrich@ git+https://github.com/saforem2/enrich->ezpz==0.0.1) (2.3.0)
+Requirement already satisfied: colorlog in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from hydra-colorlog->ezpz==0.0.1) (6.7.0)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from hydra-core->ezpz==0.0.1) (4.9.3)
+Requirement already satisfied: stack-data in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (0.6.3)
+Requirement already satisfied: prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (3.0.39)
+Requirement already satisfied: exceptiongroup in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (1.1.3)
+Requirement already satisfied: backcall in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (0.2.0)
+Requirement already satisfied: decorator in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (5.1.1)
+Requirement already satisfied: matplotlib-inline in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (0.1.6)
+Requirement already satisfied: pexpect>4.3 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (4.8.0)
+Requirement already satisfied: pygments>=2.4.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (2.16.1)
+Requirement already satisfied: pickleshare in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (0.7.5)
+Requirement already satisfied: traitlets>=5 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (5.11.2)
+Requirement already satisfied: jedi>=0.16 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from ipython->ezpz==0.0.1) (0.19.1)
+Requirement already satisfied: opt-einsum in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jax->ezpz==0.0.1) (3.3.0)
+Requirement already satisfied: scipy>=1.7 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jax->ezpz==0.0.1) (1.11.3)
+Requirement already satisfied: numpy>=1.22 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jax->ezpz==0.0.1) (1.24.3)
+Requirement already satisfied: typeguard>=2.13.3 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jaxtyping->ezpz==0.0.1) (2.13.3)
+Requirement already satisfied: greenlet>=3.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from pynvim->ezpz==0.0.1) (3.0.0)
+Requirement already satisfied: msgpack>=0.5.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from pynvim->ezpz==0.0.1) (1.0.7)
+Collecting optional-django==0.1.0
+  Downloading optional-django-0.1.0.tar.gz (9.5 kB)
+  Preparing metadata (setup.py) ... done
+Collecting ptpython
+  Downloading ptpython-3.0.26-py2.py3-none-any.whl (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.1/66.1 kB 6.0 MB/s eta 0:00:00
+Collecting urwid>=2.4
+  Downloading urwid-2.6.10-py3-none-any.whl (296 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 296.6/296.6 kB 27.2 MB/s eta 0:00:00
+Collecting urwid-readline
+  Downloading urwid_readline-0.14.tar.gz (9.0 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting flake8==6.1.0
+  Downloading flake8-6.1.0-py2.py3-none-any.whl (58 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 5.3 MB/s eta 0:00:00
+Collecting pyflakes<3.2.0,>=3.1.0
+  Downloading pyflakes-3.1.0-py2.py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 5.3 MB/s eta 0:00:00
+Collecting mccabe<0.8.0,>=0.7.0
+  Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Collecting pycodestyle<2.12.0,>=2.11.0
+  Downloading pycodestyle-2.11.1-py2.py3-none-any.whl (31 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from rich->ezpz==0.0.1) (3.0.0)
+Collecting lsprotocol>=2023.0.0
+  Downloading lsprotocol-2023.0.1-py3-none-any.whl (70 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.8/70.8 kB 6.1 MB/s eta 0:00:00
+Collecting pygls>=1.1.0
+  Downloading pygls-1.3.1-py3-none-any.whl (56 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 4.7 MB/s eta 0:00:00
+Requirement already satisfied: sympy in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->ezpz==0.0.1) (1.12)
+Requirement already satisfied: jinja2 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->ezpz==0.0.1) (3.0.3)
+Requirement already satisfied: networkx in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->ezpz==0.0.1) (3.1)
+Requirement already satisfied: filelock in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from torch->ezpz==0.0.1) (3.9.0)
+Requirement already satisfied: setuptools in ./venvs/polaris/2023-10-04/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (65.5.0)
+Requirement already satisfied: docker-pycreds>=0.4.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (0.4.0)
+Requirement already satisfied: PyYAML in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (6.0.1)
+Requirement already satisfied: pathtools in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (0.1.2)
+Requirement already satisfied: sentry-sdk>=1.0.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (1.31.0)
+Requirement already satisfied: protobuf!=4.21.0,<5,>=3.19.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (3.20.3)
+Requirement already satisfied: setproctitle in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (1.3.3)
+Requirement already satisfied: GitPython!=3.1.29,>=1.0.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (3.1.37)
+Requirement already satisfied: appdirs>=1.4.3 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (1.4.4)
+Requirement already satisfied: psutil>=5.0.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from wandb->ezpz==0.0.1) (5.9.5)
+Requirement already satisfied: pandas>=1.4 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from xarray->ezpz==0.0.1) (2.1.1)
+Requirement already satisfied: six>=1.4.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from docker-pycreds>=0.4.0->wandb->ezpz==0.0.1) (1.16.0)
+Requirement already satisfied: gitdb<5,>=4.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from GitPython!=3.1.29,>=1.0.0->wandb->ezpz==0.0.1) (4.0.10)
+Requirement already satisfied: parso<0.9.0,>=0.8.3 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jedi>=0.16->ipython->ezpz==0.0.1) (0.8.3)
+Requirement already satisfied: attrs>=21.3.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from lsprotocol>=2023.0.0->ruff-lsp->ezpz==0.0.1) (23.1.0)
+Collecting cattrs!=23.2.1
+  Downloading cattrs-23.2.3-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.5/57.5 kB 4.9 MB/s eta 0:00:00
+Requirement already satisfied: mdurl~=0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->ezpz==0.0.1) (0.1.2)
+Requirement already satisfied: tzdata>=2022.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from pandas>=1.4->xarray->ezpz==0.0.1) (2023.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from pandas>=1.4->xarray->ezpz==0.0.1) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from pandas>=1.4->xarray->ezpz==0.0.1) (2023.3.post1)
+Requirement already satisfied: ptyprocess>=0.5 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from pexpect>4.3->ipython->ezpz==0.0.1) (0.7.0)
+Requirement already satisfied: wcwidth in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30->ipython->ezpz==0.0.1) (0.2.8)
+Requirement already satisfied: idna<4,>=2.5 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from requests->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (3.4)
+Requirement already satisfied: charset-normalizer<4,>=2 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from requests->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (2.0.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from requests->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (1.26.16)
+Requirement already satisfied: certifi>=2017.4.17 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from requests->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (2023.7.22)
+Requirement already satisfied: MarkupSafe>=2.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from jinja2->torch->ezpz==0.0.1) (2.1.1)
+Requirement already satisfied: pyparsing>=2.3.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (3.1.1)
+Requirement already satisfied: cycler>=0.10 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (0.12.0)
+Requirement already satisfied: fonttools>=4.22.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (4.43.0)
+Requirement already satisfied: contourpy>=1.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (1.1.1)
+Requirement already satisfied: pillow>=6.2.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (10.0.1)
+Requirement already satisfied: kiwisolver>=1.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from matplotlib->ambivalent@ git+https://github.com/saforem2/ambivalent->ezpz==0.0.1) (1.4.5)
+Requirement already satisfied: executing>=1.2.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from stack-data->ipython->ezpz==0.0.1) (2.0.0)
+Requirement already satisfied: pure-eval in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from stack-data->ipython->ezpz==0.0.1) (0.2.2)
+Requirement already satisfied: asttokens>=2.1.0 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from stack-data->ipython->ezpz==0.0.1) (2.4.0)
+Requirement already satisfied: mpmath>=0.19 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from sympy->torch->ezpz==0.0.1) (1.3.0)
+Requirement already satisfied: smmap<6,>=3.0.1 in /soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages (from gitdb<5,>=4.0.1->GitPython!=3.1.29,>=1.0.0->wandb->ezpz==0.0.1) (5.0.1)
+Building wheels for collected packages: ezpz, neovim, nodejs, optional-django, pudb, urwid-readline
+  Building editable for ezpz (pyproject.toml) ... done
+  Created wheel for ezpz: filename=ezpz-0.0.1-py3-none-any.whl size=7793 sha256=85b4d1f2e16dc7611f7c7fdaeb1d6269776b5318465a06728bf373d600e7d739
+  Stored in directory: /var/tmp/pbs.1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-ephem-wheel-cache-uwhscru8/wheels/13/80/8b/c936e6b82bc109af91a9cf5d22ebe3de7f76a8f79b1332b40f
+  Building wheel for neovim (setup.py) ... done
+  Created wheel for neovim: filename=neovim-0.3.1-py3-none-any.whl size=1060 sha256=bd3c0508599482abd4fd70c51bf3dada2d25d69993ffd18d77a4c9b4571f6eda
+  Stored in directory: /home/afrah/.cache/pip/wheels/54/bc/ff/dad11c41d24c9a3476743772deda914f551c3dc748cefba10c
+  Building wheel for nodejs (setup.py) ... done
+  Created wheel for nodejs: filename=nodejs-0.1.1-py3-none-any.whl size=3467 sha256=419b9a86a4c73d55da418dd70fd0ca17bd73c556838d500c52546616ebc6c17f
+  Stored in directory: /home/afrah/.cache/pip/wheels/b9/6d/c6/ee0ebcf81e630864caeeedb3842682f568ad265ec5e69382b9
+  Building wheel for optional-django (setup.py) ... done
+  Created wheel for optional-django: filename=optional_django-0.1.0-py3-none-any.whl size=9953 sha256=ace5adacbd244ce0065f8522eae5014cf0ef11d1a074be727af5723ce19e42d6
+  Stored in directory: /home/afrah/.cache/pip/wheels/24/47/0a/6bdc915164c9c29e3a7d93ea1ef469c1079e2f427bce820d43
+  Building wheel for pudb (pyproject.toml) ... done
+  Created wheel for pudb: filename=pudb-2024.1-py3-none-any.whl size=86976 sha256=ef6921fe1bbe2ac84dee39ab317771bc9a6691c96ad1e4be0130ab79803f8030
+  Stored in directory: /home/afrah/.cache/pip/wheels/85/b0/e1/c80361fa965f04b6da48bfb9721e6cd8c0310288e85cebc76a
+  Building wheel for urwid-readline (pyproject.toml) ... done
+  Created wheel for urwid-readline: filename=urwid_readline-0.14-py3-none-any.whl size=9209 sha256=54c96691fb2f6777152f70f149d41f4ce482f60c8cca9473ecc9e4264326a959
+  Stored in directory: /home/afrah/.cache/pip/wheels/9e/a9/3b/e633b4c4bfdc0bc14ede89784d0fe18b21040dcc1cb9a28023
+Successfully built ezpz neovim nodejs optional-django pudb urwid-readline
+Installing collected packages: optional-django, urwid, ruff, pynvim, pyflakes, pycodestyle, pathspec, nodejs, mypy-extensions, mccabe, cattrs, urwid-readline, ptpython, neovim, mypy, lsprotocol, flake8, black, pyproject-flake8, pygls, pudb, ruff-lsp, ptipython, ezpz
+  Attempting uninstall: ezpz
+    Found existing installation: ezpz 0.0.1
+    Uninstalling ezpz-0.0.1:
+      Successfully uninstalled ezpz-0.0.1
+Successfully installed black-24.3.0 cattrs-23.2.3 ezpz-0.0.1 flake8-6.1.0 lsprotocol-2023.0.1 mccabe-0.7.0 mypy-1.9.0 mypy-extensions-1.0.0 neovim-0.3.1 nodejs-0.1.1 optional-django-0.1.0 pathspec-0.12.1 ptipython-1.0.1 ptpython-3.0.26 pudb-2024.1 pycodestyle-2.11.1 pyflakes-3.1.0 pygls-1.3.1 pynvim-0.5.0 pyproject-flake8-6.1.0 ruff-0.3.5 ruff-lsp-0.0.53 urwid-2.6.10 urwid-readline-0.14
+
+[notice] A new release of pip is available: 23.0.1 -> 24.0
+[notice] To update, run: pip install --upgrade pip
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> 
+
+ exit-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> source ezpz/src/ezpz/bin/savejobenv > /tmp/savejobenv.log 2>&1  # || 
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay>  source ezpz/src/ezpz/bin/getjobenv  # || exit
+┌──────────────────────────────────────────────────────────────────
+│ [Hosts]: 
+│     • [host:0] - x3004c0s31b0n0.hsn.cm.polaris.alcf.anl.gov
+│     • [host:1] - x3004c0s31b1n0.hsn.cm.polaris.alcf.anl.gov
+└──────────────────────────────────────────────────────────────────
+┌──────────────────────────────────────────────────────────────────
+│ [DIST INFO]: 
+│     • Loading job env from: /home/afrah/.pbsenv
+│     • HOSTFILE: /var/spool/pbs/aux/1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+│     • NHOSTS: 2
+│     • NGPU_PER_HOST: 4
+│     • NGPUS (NHOSTS x NGPU_PER_HOST): 8
+│     • WORLD_SIZE: 8
+│     • DIST_LAUNCH: mpiexec --verbose --envall -n 8 -ppn 4 --hostfile /var/spool/pbs/aux/1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov
+└──────────────────────────────────────────────────────────────────
+┌──────────────────────────────────────────────────────────────────
+│ [Launch]:
+│     • Use: 'launch' (=mpiexec --verbose --envall -n 8 -ppn 4 --hostfile /var/spool/pbs/aux/1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov)
+│       to launch job
+└──────────────────────────────────────────────────────────────────
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> 
+
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay>  python3 data/shakespeare_char/prepare.py
+Using HF_DATASETS_CACHE=/home/afrah/wordplay/data/shakespeare_char/.cache/huggingface
+length of dataset in characters: 1,115,394
+all the unique characters: 
+ !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+vocab size: 65
+train has 1,003,854 tokens
+val has 111,540 tokens
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay> 
+
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay>  cd src/wordplay
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay/src/wordplay> 
+(2023-10-04) $ launch python3 __main__.py +experiment=shakespeare data=shakespeare train.backend=DDP train.max_iters=100 train.log_interval=5 train.compile=false
+[2024-04-09 08:50:35][INFO][configs:81] - Setting HF_DATASETS_CACHE to /home/afrah/wordplay/.cache/huggingface/datasets
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+[2024-04-09 08:50:44][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2024-04-09 08:50:44][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 2
+[2024-04-09 08:50:44][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 3
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+[2024-04-09 08:50:45][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2024-04-09 08:50:45][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 5
+[2024-04-09 08:50:45][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 6
+[2024-04-09 08:50:45][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 4
+[2024-04-09 08:50:45][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 7
+[2024-04-09 08:50:45][INFO][distributed_c10d:476] - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-04-09 08:50:45][INFO][distributed_c10d:476] - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-04-09 08:50:45][INFO][distributed_c10d:476] - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-04-09 08:50:45][INFO][distributed_c10d:476] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-04-09 08:50:45][INFO][distributed_c10d:476] - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-04-09 08:50:45][INFO][distributed_c10d:476] - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-04-09 08:50:45][INFO][distributed_c10d:476] - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-04-09 08:50:45][INFO][distributed_c10d:476] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-04-09 08:50:47][INFO][dist:290] - [device='cuda'][rank=1/7][local_rank=1/3][node=1/1]
+[2024-04-09 08:50:47][INFO][dist:290] - [device='cuda'][rank=3/7][local_rank=3/3][node=1/1]
+[2024-04-09 08:50:47][INFO][dist:290] - [device='cuda'][rank=2/7][local_rank=2/3][node=0/1]
+[2024-04-09 08:50:47][INFO][dist:239] - DistInfo={
+    "DEVICE": "cuda",
+    "DEVICE_ID": "cuda:0",
+    "DISTRIBUTED_BACKEND": "nccl",
+    "GPUS_PER_NODE": 4,
+    "HOSTFILE": "/var/spool/pbs/aux/1829862.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov",
+    "HOSTNAME": "x3004c0s31b0n0.hsn.cm.polaris.alcf.anl.gov",
+    "HOSTS": "['x3004c0s31b0n0', 'x3004c0s31b1n0']",
+    "LOCAL_RANK": 0,
+    "MACHINE": "Polaris",
+    "NGPUS": 8,
+    "NODE_ID": 0,
+    "NUM_NODES": 2,
+    "RANK": 0,
+    "SCHEDULER": "PBS",
+    "WORLD_SIZE_IN_USE": 8,
+    "WORLD_SIZE_TOTAL": 8
+}
+[2024-04-09 08:50:47][INFO][dist:605] - [0/8] Using device='cuda' with backend='DDP' + 'nccl' for distributed training.
+[2024-04-09 08:50:47][INFO][dist:290] - [device='cuda'][rank=6/7][local_rank=2/3][node=0/1]
+[2024-04-09 08:50:47][INFO][dist:290] - [device='cuda'][rank=7/7][local_rank=3/3][node=1/1]
+[2024-04-09 08:50:47][INFO][dist:290] - [device='cuda'][rank=4/7][local_rank=0/3][node=0/1]
+[2024-04-09 08:50:47][INFO][dist:290] - [device='cuda'][rank=5/7][local_rank=1/3][node=1/1]
+[2024-04-09 08:50:47][INFO][dist:290] - [device='cuda'][rank=0/7][local_rank=0/3][node=0/1]
+[2024-04-09 08:50:47][WARNING][dist:296] - Using [8 / 8] available "cuda" devices !!
+[2024-04-09 08:50:47][INFO][configs:317] - Loading train from /home/afrah/wordplay/data/shakespeare_char/train.bin
+[2024-04-09 08:50:47][INFO][configs:317] - Loading val from /home/afrah/wordplay/data/shakespeare_char/val.bin
+[2024-04-09 08:50:47][INFO][configs:442] - Tokens per iteration: 131,072
+[2024-04-09 08:50:47][INFO][trainer:227] - Initializing a new model from scratch
+[2024-04-09 08:50:47][INFO][trainer:227] - Initializing a new model from scratch
+[2024-04-09 08:50:47][INFO][trainer:227] - Initializing a new model from scratch
+[2024-04-09 08:50:47][INFO][configs:465] - Using self.ptdtype=torch.bfloat16 on self.device_type='cuda'
+[2024-04-09 08:50:47][INFO][configs:471] - Initializing a new model from scratch
+[2024-04-09 08:50:47][INFO][dist:751] - Setting up wandb from rank: 0
+[2024-04-09 08:50:47][INFO][dist:752] - Using: WB PROJECT: WordPlay
+[2024-04-09 08:50:47][INFO][trainer:227] - Initializing a new model from scratch
+[2024-04-09 08:50:47][INFO][trainer:227] - Initializing a new model from scratch
+[2024-04-09 08:50:47][INFO][trainer:227] - Initializing a new model from scratch
+[2024-04-09 08:50:47][INFO][trainer:227] - Initializing a new model from scratch
+[2024-04-09 08:50:48][CRITICAL][trainer:296] - "devid='cuda:2'"
+[2024-04-09 08:50:48][CRITICAL][trainer:296] - "devid='cuda:1'"
+[2024-04-09 08:50:48][CRITICAL][trainer:296] - "devid='cuda:3'"
+[2024-04-09 08:50:48][CRITICAL][trainer:296] - "devid='cuda:0'"
+[2024-04-09 08:50:48][CRITICAL][trainer:296] - "devid='cuda:1'"
+[2024-04-09 08:50:48][CRITICAL][trainer:296] - "devid='cuda:2'"
+[2024-04-09 08:50:48][CRITICAL][trainer:296] - "devid='cuda:3'"
+wandb: Currently logged in as: afrah-nacib (afrah-farea). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.16.6 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.12
+wandb: Run data is saved locally in /home/afrah/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-04-09/08-50-44/wandb/run-20240409_085049-umz5d5mi
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run balmy-cherry-1
+wandb: ⭐️ View project at https://wandb.ai/afrah-farea/WordPlay
+wandb: 🚀 View run at https://wandb.ai/afrah-farea/WordPlay/runs/umz5d5mi
+[2024-04-09 08:50:50][INFO][dist:782] - W&B RUN: [balmy-cherry-1](https://wandb.ai/afrah-farea/WordPlay/runs/umz5d5mi)
+[2024-04-09 08:50:50][INFO][dist:810] - Running on machine='Polaris'
+[2024-04-09 08:50:50][WARNING][__main__:87] - {
+    "train": {
+        "framework": "pytorch",
+        "backend": "DDP",
+        "device": null,
+        "seed": null,
+        "port": null,
+        "ds_config_path": null,
+        "precision": null,
+        "ngpus": null,
+        "use_wandb": true,
+        "eval_interval": 250,
+        "log_interval": 5,
+        "eval_iters": 200,
+        "eval_only": false,
+        "always_save_checkpoint": false,
+        "init_from": "scratch",
+        "wandb_project": "WordPlay",
+        "max_iters": 100,
+        "warmup_iters": 100,
+        "dtype": "bfloat16",
+        "compile": false
+    },
+    "model": {
+        "n_layer": 6,
+        "n_head": 6,
+        "n_embd": 384,
+        "batch_size": 64,
+        "block_size": 256,
+        "activation": "gelu",
+        "dropout": 0.2,
+        "bias": false,
+        "vocab_size": 65
+    },
+    "data": {
+        "dataset": "shakespeare_char",
+        "out_dir": "out-shakespeare-char",
+        "root_path": null
+    },
+    "optimizer": {
+        "gas": 1,
+        "name": "AdamW",
+        "learning_rate": 0.001,
+        "weight_decay": 0.1,
+        "beta1": 0.9,
+        "beta2": 0.99,
+        "grad_clip": 1.0,
+        "decay_lr": true,
+        "lr_decay_iters": 5000,
+        "min_lr": 0.0001
+    }
+}
+[2024-04-09 08:50:50][WARNING][__main__:88] - Output dir: /home/afrah/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-04-09/08-50-44
+[2024-04-09 08:50:50][INFO][trainer:227] - Initializing a new model from scratch
+[2024-04-09 08:50:50][INFO][model:255] - number of parameters: 10.65M
+[2024-04-09 08:50:50][INFO][model:445] - num decayed parameter tensors: 26, with 10,740,096 parameters
+[2024-04-09 08:50:50][INFO][model:449] - num non-decayed parameter tensors: 13, with 4,992 parameters
+[2024-04-09 08:50:50][INFO][model:465] - using fused AdamW: True
+[2024-04-09 08:50:50][CRITICAL][trainer:296] - "devid='cuda:0'"
+[2024-04-09 08:50:53][INFO][trainer:333] - • self.model=GPT(
+  (transformer): ModuleDict(
+    (wte): Embedding(65, 384)
+    (wpe): Embedding(256, 384)
+    (drop): Dropout(p=0.2, inplace=False)
+    (h): ModuleList(
+      (0-5): 6 x Block(
+        (ln_1): LayerNorm()
+        (attn): CausalSelfAttention(
+          (c_attn): Linear(in_features=384, out_features=1152, bias=False)
+          (c_proj): Linear(in_features=384, out_features=384, bias=False)
+          (attn_dropout): Dropout(p=0.2, inplace=False)
+          (resid_dropout): Dropout(p=0.2, inplace=False)
+        )
+        (ln_2): LayerNorm()
+        (mlp): MLP(
+          (c_fc): Linear(in_features=384, out_features=1536, bias=False)
+          (act_fn): GELU(approximate='none')
+          (c_proj): Linear(in_features=1536, out_features=384, bias=False)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+      )
+    )
+    (ln_f): LayerNorm()
+  )
+  (lm_head): Linear(in_features=384, out_features=65, bias=False)
+)
+[2024-04-09 08:50:53][INFO][trainer:334] - • self.grad_scaler=<torch.cuda.amp.grad_scaler.GradScaler object at 0x1547f408e980>
+[2024-04-09 08:50:53][INFO][trainer:335] - • self.model_engine=DistributedDataParallel(
+  (module): GPT(
+    (transformer): ModuleDict(
+      (wte): Embedding(65, 384)
+      (wpe): Embedding(256, 384)
+      (drop): Dropout(p=0.2, inplace=False)
+      (h): ModuleList(
+        (0-5): 6 x Block(
+          (ln_1): LayerNorm()
+          (attn): CausalSelfAttention(
+            (c_attn): Linear(in_features=384, out_features=1152, bias=False)
+            (c_proj): Linear(in_features=384, out_features=384, bias=False)
+            (attn_dropout): Dropout(p=0.2, inplace=False)
+            (resid_dropout): Dropout(p=0.2, inplace=False)
+          )
+          (ln_2): LayerNorm()
+          (mlp): MLP(
+            (c_fc): Linear(in_features=384, out_features=1536, bias=False)
+            (act_fn): GELU(approximate='none')
+            (c_proj): Linear(in_features=1536, out_features=384, bias=False)
+            (dropout): Dropout(p=0.2, inplace=False)
+          )
+        )
+      )
+      (ln_f): LayerNorm()
+    )
+    (lm_head): Linear(in_features=384, out_features=65, bias=False)
+  )
+)
+[2024-04-09 08:50:53][INFO][trainer:336] - • self.optimizer=AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.99)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: True
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.1
+
+Parameter Group 1
+    amsgrad: False
+    betas: (0.9, 0.99)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: True
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+  0%|          | 0/100 [00:00<?, ?it/s][2024-04-09 08:50:53][INFO][trainer:769] - Startup time: 9.7895
+[2024-04-09 08:50:53][INFO][trainer:769] - Startup time: 9.7910
+[2024-04-09 08:50:53][INFO][trainer:769] - Startup time: 9.7902
+[2024-04-09 08:50:53][INFO][trainer:769] - Startup time: 9.7890
+                              Training Legend                               
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃    abbr    ┃ desc                                                        ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│    step    │ Current training iteration                                  │
+│    loss    │ Loss value                                                  │
+│     dt     │ Elapsed time per training step (measured in **ms**)         │
+│    dtf     │ Elapsed time per forward step (measured in **ms**)          │
+│    dtb     │ Elapsed time per backward step (measured in **ms**)         │
+│    sps     │ Samples per second                                          │
+│    mtps    │ Tokens per second, measured in MEGA (1 x 10^6) tokens / sec │
+│    mfu     │ Model flops utilization                                     │
+│ train_loss │ Training loss value                                         │
+│  val_loss  │ Validation loss value                                       │
+└────────────┴─────────────────────────────────────────────────────────────┘
+[2024-04-09 08:50:53][INFO][trainer:769] - Startup time: 8.6995
+[2024-04-09 08:50:53][INFO][trainer:769] - Startup time: 8.6996
+[2024-04-09 08:50:53][INFO][trainer:769] - Startup time: 8.6995
+[2024-04-09 08:50:53][INFO][trainer:769] - Startup time: 8.6994
+  1%|          | 1/100 [00:04<07:21,  4.46s/it][2024-04-09 08:50:58][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-04-09 08:50:58][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-04-09 08:50:58][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-04-09 08:50:58][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-04-09 08:50:58][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-04-09 08:50:58][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-04-09 08:50:58][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-04-09 08:50:58][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+  3%|▎         | 3/100 [00:04<01:47,  1.11s/it][2024-04-09 08:50:58][INFO][trainer:837] - step=5 loss=3.6470 dt=76.6997 dtf=4.6236 dtb=69.9858 sps=104.3029 mtps=1.7089 mfu=-100.0000 train_loss=4.1887 val_loss=4.1917
+  9%|▉         | 9/100 [00:05<00:19,  4.65it/s][2024-04-09 08:50:59][INFO][trainer:837] - step=10 loss=3.2574 dt=116.0660 dtf=4.5436 dtb=108.7456 sps=68.9263 mtps=1.1293 mfu=3.2104 train_loss=4.1887 val_loss=4.1917
+ 14%|█▍        | 14/100 [00:05<00:10,  8.19it/s][2024-04-09 08:50:59][INFO][trainer:837] - step=15 loss=2.9661 dt=116.6354 dtf=4.4586 dtb=108.7365 sps=68.5898 mtps=1.1238 mfu=3.2089 train_loss=4.1887 val_loss=4.1917
+ 19%|█▉        | 19/100 [00:06<00:08,  9.28it/s][2024-04-09 08:51:00][INFO][trainer:837] - step=20 loss=2.8172 dt=99.5289 dtf=4.5428 dtb=91.8105 sps=80.3787 mtps=1.3169 mfu=3.2624 train_loss=4.1887 val_loss=4.1917
+ 24%|██▍       | 24/100 [00:06<00:08,  9.25it/s][2024-04-09 08:51:00][INFO][trainer:837] - step=25 loss=2.6711 dt=82.0016 dtf=4.5254 dtb=74.6395 sps=97.5591 mtps=1.5984 mfu=3.3905 train_loss=4.1887 val_loss=4.1917
+ 28%|██▊       | 28/100 [00:07<00:07,  9.72it/s][2024-04-09 08:51:01][INFO][trainer:837] - step=30 loss=2.6215 dt=108.9101 dtf=4.5874 dtb=102.1834 sps=73.4551 mtps=1.2035 mfu=3.3936 train_loss=4.1887 val_loss=4.1917
+ 34%|███▍      | 34/100 [00:07<00:06, 10.88it/s][2024-04-09 08:51:01][INFO][trainer:837] - step=35 loss=2.5682 dt=102.3376 dtf=4.5022 dtb=95.0567 sps=78.1726 mtps=1.2808 mfu=3.4184 train_loss=4.1887 val_loss=4.1917
+ 38%|███▊      | 38/100 [00:08<00:05, 11.03it/s][2024-04-09 08:51:02][INFO][trainer:837] - step=40 loss=2.5377 dt=94.8454 dtf=4.4516 dtb=86.6478 sps=84.3478 mtps=1.3820 mfu=3.4694 train_loss=4.1887 val_loss=4.1917
+ 44%|████▍     | 44/100 [00:08<00:04, 12.19it/s][2024-04-09 08:51:02][INFO][trainer:837] - step=45 loss=2.5318 dt=58.5547 dtf=4.5467 dtb=51.2433 sps=136.6243 mtps=2.2385 mfu=3.7588 train_loss=4.1887 val_loss=4.1917
+ 48%|████▊     | 48/100 [00:08<00:03, 13.52it/s][2024-04-09 08:51:02][INFO][trainer:837] - step=50 loss=2.5078 dt=99.2073 dtf=4.5276 dtb=92.6138 sps=80.6393 mtps=1.3212 mfu=3.7586 train_loss=4.1887 val_loss=4.1917
+ 54%|█████▍    | 54/100 [00:09<00:03, 12.43it/s][2024-04-09 08:51:03][INFO][trainer:837] - step=55 loss=2.4928 dt=112.8771 dtf=4.4816 dtb=105.6576 sps=70.8735 mtps=1.1612 mfu=3.7128 train_loss=4.1887 val_loss=4.1917
+ 58%|█████▊    | 58/100 [00:09<00:03, 11.89it/s][2024-04-09 08:51:03][INFO][trainer:837] - step=60 loss=2.5007 dt=88.1454 dtf=4.5112 dtb=81.5492 sps=90.7591 mtps=1.4870 mfu=3.7643 train_loss=4.1887 val_loss=4.1917
+ 64%|██████▍   | 64/100 [00:10<00:02, 12.28it/s][2024-04-09 08:51:04][INFO][trainer:837] - step=65 loss=2.4695 dt=59.2892 dtf=4.5004 dtb=51.9981 sps=134.9319 mtps=2.2107 mfu=4.0163 train_loss=4.1887 val_loss=4.1917
+ 68%|██████▊   | 68/100 [00:10<00:02, 13.34it/s][2024-04-09 08:51:04][INFO][trainer:837] - step=70 loss=2.4824 dt=61.8748 dtf=4.6734 dtb=55.0761 sps=129.2934 mtps=2.1183 mfu=4.2169 train_loss=4.1887 val_loss=4.1917
+ 74%|███████▍  | 74/100 [00:10<00:01, 13.89it/s][2024-04-09 08:51:04][INFO][trainer:837] - step=75 loss=2.4631 dt=89.7928 dtf=4.4626 dtb=82.5502 sps=89.0940 mtps=1.4597 mfu=4.2102 train_loss=4.1887 val_loss=4.1917
+ 78%|███████▊  | 78/100 [00:11<00:01, 13.79it/s][2024-04-09 08:51:05][INFO][trainer:837] - step=80 loss=2.4511 dt=113.5219 dtf=4.6513 dtb=106.7622 sps=70.4710 mtps=1.1546 mfu=4.1174 train_loss=4.1887 val_loss=4.1917
+ 84%|████████▍ | 84/100 [00:11<00:01, 12.03it/s][2024-04-09 08:51:05][INFO][trainer:837] - step=85 loss=2.4350 dt=82.7805 dtf=7.2208 dtb=71.5179 sps=96.6411 mtps=1.5834 mfu=4.1558 train_loss=4.1887 val_loss=4.1917
+ 88%|████████▊ | 88/100 [00:12<00:01, 11.45it/s][2024-04-09 08:51:06][INFO][trainer:837] - step=90 loss=2.4370 dt=119.4908 dtf=4.4555 dtb=112.9257 sps=66.9508 mtps=1.0969 mfu=4.0521 train_loss=4.1887 val_loss=4.1917
+ 94%|█████████▍| 94/100 [00:12<00:00, 10.97it/s][2024-04-09 08:51:06][INFO][trainer:837] - step=95 loss=2.4906 dt=73.7829 dtf=4.3980 dtb=66.6467 sps=108.4262 mtps=1.7765 mfu=4.1519 train_loss=4.1887 val_loss=4.1917
+ 98%|█████████▊| 98/100 [00:13<00:00, 11.80it/s][2024-04-09 08:51:06][INFO][trainer:837] - step=100 loss=2.4511 dt=59.0332 dtf=4.3733 dtb=52.6242 sps=135.5169 mtps=2.2203 mfu=4.3679 train_loss=4.1887 val_loss=4.1917
+100%|██████████| 100/100 [00:13<00:00,  7.54it/s]
+[2024-04-09 08:51:08][INFO][__main__:113] - ['prompt']: 'What is an LLM?'
+[2024-04-09 08:51:08][INFO][__main__:114] - ['response']:
+
+What is an LLM?
+Wheveend sourd;
+Wind mer thorowing d.
+Nopod.
+GATIORTHAWANTERT:
+F he hourend m and mprel soularend yate bere he,
+ICARD:
+
+
+
+MARIEOK:
+HARDor s weatour ind he, myou an s therd thee bothed frer wind d winisosthe y thimanou f ache m ind llera il soungre cars h 
+[2024-04-09 08:51:08][INFO][trainer:735] - Saving checkpoint to: /home/afrah/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-04-09/08-50-44
+[2024-04-09 08:51:08][INFO][trainer:736] - Saving model to: /home/afrah/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-04-09/08-50-44/model.pth
+[2024-04-09 08:51:08][INFO][configs:141] - Appending /home/afrah/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-04-09/08-50-44 to /home/afrah/wordplay/src/ckpts/checkpoints.log
+wandb: Waiting for W&B process to finish... (success).
+wandb: | 41.197 MB of 41.197 MB uploaded (0.000 MB deduped)
+wandb: Run history:
+wandb:              Loss/iter ▁▁▂▂▂▃▃▄▄▄▅▅▅▆▆▇▇▇██
+wandb:             Loss/lossf █▆▄▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁
+wandb:               Loss/mfu ▁███████████████████
+wandb:             Loss/train ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:               Loss/val ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:          Timing/dt_avg ▃██▆▄▇▆▅▁▆▇▄▁▁▅▇▄█▃▁
+wandb:         Timing/dt_iter ▃██▆▄▇▆▅▁▆▇▄▁▁▅▇▄█▃▁
+wandb:          Timing/dt_tot ▃██▆▄▇▆▅▁▆▇▄▁▁▅▇▄█▃▁
+wandb:         Timing/dtb_avg ▃██▆▄▇▆▅▁▆▇▄▁▁▅▇▃█▃▁
+wandb:         Timing/dtb_tot ▃██▆▄▇▆▅▁▆▇▄▁▁▅▇▃█▃▁
+wandb:         Timing/dtf_avg ▂▁▁▁▁▂▁▁▁▁▁▁▁▂▁▂█▁▁▁
+wandb:         Timing/dtf_tot ▂▁▁▁▁▂▁▁▁▁▁▁▁▂▁▂█▁▁▁
+wandb:            Timing/iter ▁▁▂▂▂▃▃▄▄▄▅▅▅▆▆▇▇▇██
+wandb: Timing/samples_per_sec ▅▁▁▂▄▂▂▃█▂▁▃█▇▃▁▄▁▅█
+wandb:    Timing/startup_time ▁
+wandb:  Timing/tokens_per_sec ▅▁▁▂▄▂▂▃█▂▁▃█▇▃▁▄▁▅█
+wandb:          Training/iter ▁▁▂▂▂▃▃▄▄▄▅▅▅▆▆▇▇▇██
+wandb:          Training/loss █▆▄▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁
+wandb:      Training/loss_tot █▆▄▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁
+wandb:            Training/lr ▁▁▂▂▂▃▃▄▄▄▅▅▅▆▆▇▇▇██
+wandb: 
+wandb: Run summary:
+wandb:              Loss/iter 100
+wandb:             Loss/lossf 2.45105
+wandb:               Loss/mfu 4.36792
+wandb:             Loss/train 4.18872
+wandb:               Loss/val 4.19169
+wandb:          Timing/dt_avg 0.0285
+wandb:         Timing/dt_iter 0.05903
+wandb:          Timing/dt_tot 0.057
+wandb:         Timing/dtb_avg 0.05262
+wandb:         Timing/dtb_tot 0.05262
+wandb:         Timing/dtf_avg 0.00437
+wandb:         Timing/dtf_tot 0.00437
+wandb:            Timing/iter 99
+wandb: Timing/samples_per_sec 135.51694
+wandb:    Timing/startup_time 9.78904
+wandb:  Timing/tokens_per_sec 2220309.58908
+wandb:          Training/iter 99
+wandb:          Training/loss 2.45105
+wandb:      Training/loss_tot 2.45105
+wandb:            Training/lr 0.00099
+wandb: 
+wandb: 🚀 View run balmy-cherry-1 at: https://wandb.ai/afrah-farea/WordPlay/runs/umz5d5mi
+wandb: ️⚡ View job at https://wandb.ai/afrah-farea/WordPlay/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjE2MDU1NTE0Ng==/version_details/v0
+wandb: Synced 5 W&B file(s), 0 media file(s), 25 artifact file(s) and 0 other file(s)
+wandb: Find logs at: /home/afrah/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-04-09/08-50-44/wandb/run-20240409_085049-umz5d5mi/logs
+Application 50fd4a91 resources: utime=135s stime=166s maxrss=3536648KB inblock=4351672 oublock=508032 minflt=4848905 majflt=8 nvcsw=540741 nivcsw=27336
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay/src/wordplay>
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay/src/wordplay> pwd
+/home/afrah/wordplay/src/wordplay
+(2023-10-04) (2023-10-04/base) afrah@x3004c0s31b0n0:~/wordplay/src/wordplay>  
+
+
+
+
+
