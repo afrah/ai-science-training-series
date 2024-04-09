@@ -702,4 +702,63 @@ Running inference using PyTorch model (CPU).
 |  groq  |  77.47%  |           0.06          |    15957.42    |         0.03         |   37576.72  |
 +--------+----------+-------------------------+----------------+----------------------+-------------+
 Proof point /home/afrah/groqflow/proof_points/natural_language_processing/bert/bert_tiny.py finished!
-(groqflow) afrah@groq-r01-gn-08:~/groqflow/proof_points/natural_language_processing/bert$   
+(groqflow) afrah@groq-r01-gn-08:~/groqflow/proof_points/natural_language_processing/bert$  
+
+(groqflow) afrah@groq-r01-gn-08:~/groqflow/proof_points/natural_language_processing/bert$ ls
+README.md  bert_base.py  bert_quantize.py  bert_tiny.py  requirements.txt
+(groqflow) afrah@groq-r01-gn-08:~/groqflow/proof_points/natural_language_processing/bert$ vim bert_tiny.py
+(groqflow) afrah@groq-r01-gn-08:~/groqflow/proof_points/natural_language_processing/bert$ python bert_tiny.py
+/home/afrah/miniconda3/envs/groqflow/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+
+Warning: build_model() discovered a cached build of bert_tiny, but decided to rebuild for the following reasons: 
+         
+         - Input shape of model "bert_tiny" changed from {'attention_mask': (1, 128), 'input_ids': (1, 128)} to {'attention_mask': (100, 128), 'input_ids': (100, 128)} since the last time it was built. 
+         
+         build_model() will now rebuild your model to ensure correctness. You can change this policy by setting the build_model(rebuild=...) argument.
+
+
+
+Building "bert_tiny"
+    ✓ Exporting PyTorch to ONNX   
+    ✓ Optimizing ONNX file   
+    ✓ Checking for Op support   
+    ✓ Converting to FP16   
+    ✓ Compiling model   
+    × Assembling model   
+
+
+Error: Attempted to use Groq Assembler to convert your model's Alan Assembly (.aa files) into
+       Groq input/output program (IOP) files. However, this operation did not succeed.
+       Please contact GroqFlow support to determine a path forwards.
+       More information may be available in the log file at ~/.cache/groqflow/bert_tiny/log_assemble.txt
+       
+
+▄██████████████▄▐█▄▄▄▄█▌
+██████▌▄▌▄▐▐▌███▌▀▀██▀▀
+████▄█▌▄▌▄▐▐▌▀███▄▄█▌
+▄▄▄▄▄██████████████
+
+
+Traceback (most recent call last):
+  File "/home/afrah/groqflow/proof_points/natural_language_processing/bert/bert_tiny.py", line 64, in <module>
+    evaluate_bert_tiny(**parse_args())
+  File "/home/afrah/groqflow/proof_points/natural_language_processing/bert/bert_tiny.py", line 47, in evaluate_bert_tiny
+    groq_model = groqit(pytorch_model, dummy_inputs, rebuild=rebuild_policy)
+  File "/home/afrah/groqflow/groqflow/justgroqit/groqit.py", line 125, in groqit
+    state = sequence_locked.launch(state)
+  File "/home/afrah/miniconda3/envs/groqflow/lib/python3.10/site-packages/onnxflow/justbuildit/stage.py", line 283, in launch
+    state = stage.fire_helper(state)
+  File "/home/afrah/miniconda3/envs/groqflow/lib/python3.10/site-packages/onnxflow/justbuildit/stage.py", line 119, in fire_helper
+    state = self.fire(state)
+  File "/home/afrah/groqflow/groqflow/justgroqit/compile.py", line 445, in fire
+    raise exp.StageError(msg)
+onnxflow.common.exceptions.StageError: 
+            Attempted to use Groq Assembler to convert your model's Alan Assembly (.aa files) into
+            Groq input/output program (IOP) files. However, this operation did not succeed.
+            Please contact GroqFlow support to determine a path forwards.
+            More information may be available in the log file at **/home/afrah/.cache/groqflow/bert_tiny/log_assemble.txt**
+            
+(groqflow) afrah@groq-r01-gn-08:~/groqflow/proof_points/natural_language_processing/bert$ ls
+README.md  bert_base.py  bert_quantize.py  bert_tiny.py  requirements.txt
+(groqflow) afrah@groq-r01-gn-08:~/groqflow/proof_points/natural_language_processing/bert$ 
