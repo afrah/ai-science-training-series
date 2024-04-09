@@ -1,0 +1,680 @@
+afrah@polaris-login-01:~/ai-science-training-series>  ssh afrah@gc-login-01.ai.alcf.anl.gov
+Warning: Permanently added 'gc-login-01.ai.alcf.anl.gov,140.221.77.23' (ECDSA) to the list of known hosts.
+Password: 
+
+---------------------------------------------------------------------------
+                            Notice to Users
+
+This is a Federal computer system and is the property of the United States
+Government. It is for authorized use only. Users (authorized or unauthorized)
+have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted,
+monitored, recorded, copied, audited, inspected, and disclosed to authorized
+site, Department of Energy, and law enforcement personnel, as well as
+authorized officials of other agencies, both domestic and foreign. By using
+this system, the user consents to such interception, monitoring, recording,
+copying, auditing, inspection, and disclosure at the discretion of authorized
+site or Department of Energy personnel.
+
+Unauthorized or improper use of this system may result in administrative
+disciplinary action and civil and criminal penalties. By continuing to use
+this system you indicate your awareness of and consent to these terms and
+conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+----------------------------------------------------------------------------
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+afrah@gc-login-01:~$ 
+
+afrah@gc-login-01:~$ ssh gc-poplar-04.ai.alcf.anl.gov
+
+---------------------------------------------------------------------------
+                            Notice to Users
+
+This is a Federal computer system and is the property of the United States
+Government. It is for authorized use only. Users (authorized or unauthorized)
+have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted,
+monitored, recorded, copied, audited, inspected, and disclosed to authorized
+site, Department of Energy, and law enforcement personnel, as well as
+authorized officials of other agencies, both domestic and foreign. By using
+this system, the user consents to such interception, monitoring, recording,
+copying, auditing, inspection, and disclosure at the discretion of authorized
+site or Department of Energy personnel.
+
+Unauthorized or improper use of this system may result in administrative
+disciplinary action and civil and criminal penalties. By continuing to use
+this system you indicate your awareness of and consent to these terms and
+conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+----------------------------------------------------------------------------
+
+
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-172-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Tue 09 Apr 2024 12:54:32 PM UTC
+
+  System load:              0.03
+  Usage of /:               82.1% of 97.87GB
+  Memory usage:             2%
+  Swap usage:               0%
+  Processes:                2425
+  Users logged in:          1
+  IPv4 address for docker0: 10.240.0.1
+  IPv4 address for eno1:    10.1.3.104
+  IPv4 address for ens2f0:  140.221.77.14
+  IPv4 address for ens2f1:  10.1.5.104
+  IPv4 address for idrac:   169.254.1.2
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:1040:64ae:66f7:ba9f
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:647c:87fe:fb1b:e8c4
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:ec35:c1c9:9696:e662
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:d433:ce73:bda6:d78b
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:d446:ca4d:d636:a044
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:adee:f0b8:55d7:2227
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:6509:3207:f8cc:e0a8
+  IPv6 address for idrac:   fde1:53ba:e9a0:de11:ce48:3aff:fe1c:edb7
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+21 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+20 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+-----------------------------------------------------------------------------
+
+                           Notice to Users
+
+This is a Federal computer system and is the property of the United States
+Government. It is for authorized use only. Users (authorized or unauthorized)
+have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted,
+monitored, recorded, copied, audited, inspected, and disclosed to authorized
+site, Department of Energy, and law enforcement personnel, as well as
+authorized officials of other agencies, both domestic and foreign. By using
+this system, the user consents to such interception, monitoring, recording,
+copying, auditing, inspection, and disclosure at the discretion of authorized
+site or Department of Energy personnel.
+
+Unauthorized or improper use of this system may result in administrative
+disciplinary action and civil and criminal penalties. By continuing to use
+this system you indicate your awareness of and consent to these terms and
+conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+
+                           Notice to Users
+
+This is a Federal computer system and is the property of the United States
+Government. It is for authorized use only. Users (authorized or unauthorized)
+have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted,
+monitored, recorded, copied, audited, inspected, and disclosed to authorized
+site, Department of Energy, and law enforcement personnel, as well as
+authorized officials of other agencies, both domestic and foreign. By using
+this system, the user consents to such interception, monitoring, recording,
+copying, auditing, inspection, and disclosure at the discretion of authorized
+site or Department of Energy personnel.
+
+Unauthorized or improper use of this system may result in administrative
+disciplinary action and civil and criminal penalties. By continuing to use
+this system you indicate your awareness of and consent to these terms and
+conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions
+stated in this warning.
+
+-----------------------------------------------------------------------------
+
+afrah@gc-poplar-04:~$ 
+
+afrah@gc-poplar-04:~$ mkdir -p ~/venvs/graphcore
+afrah@gc-poplar-04:~$ virtualenv ~/venvs/graphcore/poptorch33_env
+created virtual environment CPython3.8.10.final.0-64 in 578ms
+  creator CPython3Posix(dest=/home/afrah/venvs/graphcore/poptorch33_env, clear=False, global=False)
+  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, pkg_resources=latest, via=copy, app_data_dir=/home/afrah/.local/share/virtualenv/seed-app-data/v1.0.1.debian.1)
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+afrah@gc-poplar-04:~$ source ~/venvs/graphcore/poptorch33_env/bin/activate
+(poptorch33_env) afrah@gc-poplar-04:~$ POPLAR_SDK_ROOT=/software/graphcore/poplar_sdk/3.3.0
+(poptorch33_env) afrah@gc-poplar-04:~$ export POPLAR_SDK_ROOT=$POPLAR_SDK_ROOT
+(poptorch33_env) afrah@gc-poplar-04:~$ pip install $POPLAR_SDK_ROOT/poptorch-3.3.0+113432_960e9c294b_ubuntu_20_04-cp38-cp38-linux_x86_64.whl
+Processing /software/graphcore/poplar_sdk/3.3.0/poptorch-3.3.0+113432_960e9c294b_ubuntu_20_04-cp38-cp38-linux_x86_64.whl
+Collecting torchvision@ https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl
+  Downloading https://download.pytorch.org/whl/cpu/torchvision-0.15.2%2Bcpu-cp38-cp38-linux_x86_64.whl (24.9 MB)
+     |████████████████████████████████| 24.9 MB 25.3 MB/s 
+Collecting torch@ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl
+  Downloading https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp38-cp38-linux_x86_64.whl (195.4 MB)
+     |████████████████████████████████| 195.4 MB 173.8 MB/s 
+Collecting tqdm
+  Downloading tqdm-4.66.2-py3-none-any.whl (78 kB)
+     |████████████████████████████████| 78 kB 2.0 MB/s 
+Collecting torchaudio@ https://download.pytorch.org/whl/cpu/torchaudio-2.0.2%2Bcpu-cp38-cp38-linux_x86_64.whl
+  Downloading https://download.pytorch.org/whl/cpu/torchaudio-2.0.2%2Bcpu-cp38-cp38-linux_x86_64.whl (4.1 MB)
+     |████████████████████████████████| 4.1 MB 107.8 MB/s 
+Collecting requests
+  Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+     |████████████████████████████████| 62 kB 1.4 MB/s 
+Collecting numpy
+  Downloading numpy-1.24.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+     |████████████████████████████████| 17.3 MB 10.6 MB/s 
+Collecting pillow!=8.3.*,>=5.3.0
+  Downloading pillow-10.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.4 MB)
+     |████████████████████████████████| 4.4 MB 114.8 MB/s 
+Collecting filelock
+  Downloading filelock-3.13.3-py3-none-any.whl (11 kB)
+Collecting networkx
+  Downloading networkx-3.1-py3-none-any.whl (2.1 MB)
+     |████████████████████████████████| 2.1 MB 123.7 MB/s 
+Collecting sympy
+  Downloading sympy-1.12-py3-none-any.whl (5.7 MB)
+     |████████████████████████████████| 5.7 MB 128.9 MB/s 
+Collecting typing-extensions
+  Downloading typing_extensions-4.11.0-py3-none-any.whl (34 kB)
+Collecting jinja2
+  Downloading Jinja2-3.1.3-py3-none-any.whl (133 kB)
+     |████████████████████████████████| 133 kB 133.8 MB/s 
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.2.1-py3-none-any.whl (121 kB)
+     |████████████████████████████████| 121 kB 141.1 MB/s 
+Collecting charset-normalizer<4,>=2
+  Downloading charset_normalizer-3.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (141 kB)
+     |████████████████████████████████| 141 kB 131.6 MB/s 
+Collecting certifi>=2017.4.17
+  Downloading certifi-2024.2.2-py3-none-any.whl (163 kB)
+     |████████████████████████████████| 163 kB 149.8 MB/s 
+Collecting idna<4,>=2.5
+  Downloading idna-3.6-py3-none-any.whl (61 kB)
+     |████████████████████████████████| 61 kB 228 kB/s 
+Collecting mpmath>=0.19
+  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+     |████████████████████████████████| 536 kB 137.6 MB/s 
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (26 kB)
+Installing collected packages: urllib3, charset-normalizer, certifi, idna, requests, numpy, pillow, filelock, networkx, mpmath, sympy, typing-extensions, MarkupSafe, jinja2, torch, torchvision, tqdm, torchaudio, poptorch
+Successfully installed MarkupSafe-2.1.5 certifi-2024.2.2 charset-normalizer-3.3.2 filelock-3.13.3 idna-3.6 jinja2-3.1.3 mpmath-1.3.0 networkx-3.1 numpy-1.24.4 pillow-10.3.0 poptorch-3.3.0+113432 requests-2.31.0 sympy-1.12 torch-2.0.1+cpu torchaudio-2.0.2+cpu torchvision-0.15.2+cpu tqdm-4.66.2 typing-extensions-4.11.0 urllib3-2.2.1
+(poptorch33_env) afrah@gc-poplar-04:~$ 
+(poptorch33_env) afrah@gc-poplar-04:~$ mkdir ~/tmp
+(poptorch33_env) afrah@gc-poplar-04:~$ export TF_POPLAR_FLAGS=--executable_cache_path=~/tmpexport POPTORCH_CACHE_DIR=~/tmpexport POPART_LOG_LEVEL=WARNexport POPLAR_LOG_LEVEL=WARNexport POPLIBS_LOG_LEVEL=WARNexport PYTHONPATH=/software/graphcore/poplar_sdk/3.3.0/poplar-ubuntu_20_04-3.3.0+7857-b67b751185/python:$PYTHONPATH
+(poptorch33_env) afrah@gc-poplar-04:~$ 
+(poptorch33_env) afrah@gc-poplar-04:~$ mkdir ~/graphcore
+(poptorch33_env) afrah@gc-poplar-04:~$ cd ~/graphcore
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore$ git clone https://github.com/graphcore/examples.git
+Cloning into 'examples'...
+remote: Enumerating objects: 13979, done.
+remote: Counting objects: 100% (5450/5450), done.
+remote: Compressing objects: 100% (3201/3201), done.
+remote: Total 13979 (delta 3048), reused 2883 (delta 2121), pack-reused 8529
+Receiving objects: 100% (13979/13979), 149.58 MiB | 72.25 MiB/s, done.
+Resolving deltas: 100% (6986/6986), done.
+Updating files: 100% (2195/2195), done.
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore$ cd examples
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore/examples$ git tag
+v2.1.0
+v2.2.0
+v2.3.0
+v2.4.0
+v2.5.0
+v2.6.0
+v3.0.0
+v3.1.0
+v3.2.0
+v3.3.0
+v3.4.0
+v3.4.1
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore/examples$ git checkout v3.3.0
+Note: switching to 'v3.3.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at bf12eaa Updates with Poplar SDK 3.3.0 release
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore/examples$
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore/examples$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+             20885       p64     bash fferdaus  R   19:40:56      1 gc-poplar-03
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore/examples$ cd ~/graphcore/examples/nlp/bert/pytorch
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore/examples/nlp/bert/pytorch$ source ~/venvs/graphcore/poptorch33_env/bin/activate
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore/examples/nlp/bert/pytorch$ pip3 install -r requirements.txt
+Ignoring torch: markers 'python_version == "3.6"' don't match your environment
+Ignoring numpy: markers 'python_version <= "3.7"' don't match your environment
+Collecting transformers==4.18.0
+  Downloading transformers-4.18.0-py3-none-any.whl (4.0 MB)
+     |████████████████████████████████| 4.0 MB 2.2 MB/s 
+Collecting datasets==2.1.0
+  Downloading datasets-2.1.0-py3-none-any.whl (325 kB)
+     |████████████████████████████████| 325 kB 1.2 MB/s 
+Collecting tokenizers==0.12.1
+  Downloading tokenizers-0.12.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (6.6 MB)
+     |████████████████████████████████| 6.6 MB 580 kB/s 
+Collecting scipy==1.5.4
+  Downloading scipy-1.5.4-cp38-cp38-manylinux1_x86_64.whl (25.8 MB)
+     |████████████████████████████████| 25.8 MB 486 kB/s 
+Collecting pyyaml==5.4.1
+  Downloading PyYAML-5.4.1-cp38-cp38-manylinux1_x86_64.whl (662 kB)
+     |████████████████████████████████| 662 kB 800 kB/s 
+Collecting protobuf==3.19.4
+  Downloading protobuf-3.19.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 1.0 MB/s 
+Collecting wandb==0.12.8
+  Downloading wandb-0.12.8-py2.py3-none-any.whl (1.7 MB)
+     |████████████████████████████████| 1.7 MB 1.2 MB/s 
+Collecting pytest==6.2.5
+  Downloading pytest-6.2.5-py3-none-any.whl (280 kB)
+     |████████████████████████████████| 280 kB 1.4 MB/s 
+Collecting pytest-pythonpath==0.7.4
+  Downloading pytest_pythonpath-0.7.4-py3-none-any.whl (3.7 kB)
+Collecting tfrecord==1.14.1
+  Downloading tfrecord-1.14.1.tar.gz (15 kB)
+Collecting filelock==3.11.0
+  Downloading filelock-3.11.0-py3-none-any.whl (10.0 kB)
+Collecting mpi4py==3.1.3
+  Downloading mpi4py-3.1.3.tar.gz (2.5 MB)
+     |████████████████████████████████| 2.5 MB 996 kB/s 
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+    Preparing wheel metadata ... done
+Collecting horovod[pytorch]==0.24.0
+  Downloading horovod-0.24.0.tar.gz (3.4 MB)
+     |████████████████████████████████| 3.4 MB 911 kB/s 
+Collecting examples-utils[benchmark]@ git+https://github.com/graphcore/examples-utils@v3.3
+  Cloning https://github.com/graphcore/examples-utils (to revision v3.3) to /mnt/localdata/pip-install-uxj2x20c/examples-utils
+  Running command git clone -q https://github.com/graphcore/examples-utils /mnt/localdata/pip-install-uxj2x20c/examples-utils
+  Running command git checkout -q 4165705d365a824e60fb32106c94119561518c31
+  WARNING: examples-utils 0.1.0 does not provide the extra 'benchmark'
+Collecting cmake==3.22.4
+  Downloading cmake-3.22.4-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (22.5 MB)
+     |████████████████████████████████| 22.5 MB 1.3 MB/s 
+Collecting grpcio==1.54.2
+  Downloading grpcio-1.54.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.1 MB)
+     |████████████████████████████████| 5.1 MB 936 kB/s 
+Collecting tritonclient[grpc]==2.16.0
+  Downloading tritonclient-2.16.0-py3-none-manylinux1_x86_64.whl (7.8 MB)
+     |████████████████████████████████| 7.8 MB 1.4 MB/s 
+Requirement already satisfied: torch==2.0.1+cpu in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from -r requirements.txt (line 19)) (2.0.1+cpu)
+Collecting numpy==1.23.5
+  Downloading numpy-1.23.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+     |████████████████████████████████| 17.1 MB 989 kB/s 
+Collecting regex!=2019.12.17
+  Downloading regex-2023.12.25-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (777 kB)
+     |████████████████████████████████| 777 kB 801 kB/s 
+Requirement already satisfied: requests in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from transformers==4.18.0->-r requirements.txt (line 1)) (2.31.0)
+Collecting sacremoses
+  Downloading sacremoses-0.1.1-py3-none-any.whl (897 kB)
+     |████████████████████████████████| 897 kB 988 kB/s 
+Collecting packaging>=20.0
+  Downloading packaging-24.0-py3-none-any.whl (53 kB)
+     |████████████████████████████████| 53 kB 1.2 MB/s 
+Requirement already satisfied: tqdm>=4.27 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from transformers==4.18.0->-r requirements.txt (line 1)) (4.66.2)
+Collecting huggingface-hub<1.0,>=0.1.0
+  Downloading huggingface_hub-0.22.2-py3-none-any.whl (388 kB)
+     |████████████████████████████████| 388 kB 1.2 MB/s 
+Collecting xxhash
+  Downloading xxhash-3.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (194 kB)
+     |████████████████████████████████| 194 kB 1.6 MB/s 
+Collecting multiprocess
+  Downloading multiprocess-0.70.16-py38-none-any.whl (132 kB)
+     |████████████████████████████████| 132 kB 1.7 MB/s 
+Collecting dill
+  Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+     |████████████████████████████████| 116 kB 1.8 MB/s 
+Collecting fsspec[http]>=2021.05.0
+  Downloading fsspec-2024.3.1-py3-none-any.whl (171 kB)
+     |████████████████████████████████| 171 kB 1.8 MB/s 
+Collecting responses<0.19
+  Downloading responses-0.18.0-py3-none-any.whl (38 kB)
+Collecting pyarrow>=5.0.0
+  Downloading pyarrow-15.0.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.5 MB)
+     |████████████████████████████████| 38.5 MB 1.2 MB/s 
+Collecting pandas
+  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+     |████████████████████████████████| 12.4 MB 965 kB/s 
+Collecting aiohttp
+  Downloading aiohttp-3.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+     |████████████████████████████████| 1.3 MB 1.3 MB/s 
+Collecting GitPython>=1.0.0
+  Downloading GitPython-3.1.43-py3-none-any.whl (207 kB)
+     |████████████████████████████████| 207 kB 1.3 MB/s 
+Collecting sentry-sdk>=1.0.0
+  Downloading sentry_sdk-1.44.1-py2.py3-none-any.whl (266 kB)
+     |████████████████████████████████| 266 kB 1.5 MB/s 
+Collecting subprocess32>=3.5.3
+  Downloading subprocess32-3.5.4.tar.gz (97 kB)
+     |████████████████████████████████| 97 kB 1.7 MB/s 
+Collecting promise<3,>=2.0
+  Downloading promise-2.3.tar.gz (19 kB)
+Collecting python-dateutil>=2.6.1
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+     |████████████████████████████████| 229 kB 1.8 MB/s 
+Collecting pathtools
+  Downloading pathtools-0.1.2.tar.gz (11 kB)
+Collecting Click!=8.0.0,>=7.0
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     |████████████████████████████████| 97 kB 2.0 MB/s 
+Collecting yaspin>=1.0.0
+  Downloading yaspin-2.5.0-py3-none-any.whl (18 kB)
+Collecting shortuuid>=0.5.0
+  Downloading shortuuid-1.0.13-py3-none-any.whl (10 kB)
+Collecting six>=1.13.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting docker-pycreds>=0.4.0
+  Downloading docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Collecting psutil>=5.0.0
+  Downloading psutil-5.9.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+     |████████████████████████████████| 288 kB 1.8 MB/s 
+Collecting configparser>=3.8.1
+  Downloading configparser-6.0.1-py3-none-any.whl (19 kB)
+Collecting py>=1.8.2
+  Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+     |████████████████████████████████| 98 kB 1.2 MB/s 
+Collecting attrs>=19.2.0
+  Downloading attrs-23.2.0-py3-none-any.whl (60 kB)
+     |████████████████████████████████| 60 kB 953 kB/s 
+Collecting iniconfig
+  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting pluggy<2.0,>=0.12
+  Downloading pluggy-1.4.0-py3-none-any.whl (20 kB)
+Collecting toml
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting crc32c
+  Downloading crc32c-2.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43 kB)
+     |████████████████████████████████| 43 kB 759 kB/s 
+Collecting cffi>=1.4.0
+  Downloading cffi-1.16.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (444 kB)
+     |████████████████████████████████| 444 kB 782 kB/s 
+Collecting cloudpickle
+  Downloading cloudpickle-3.0.0-py3-none-any.whl (20 kB)
+Collecting pytorch_lightning==1.3.8
+  Downloading pytorch_lightning-1.3.8-py3-none-any.whl (813 kB)
+     |████████████████████████████████| 813 kB 1.2 MB/s 
+Collecting awscli>=1.24.10
+  Downloading awscli-1.32.80-py3-none-any.whl (4.4 MB)
+     |████████████████████████████████| 4.4 MB 902 kB/s 
+Collecting boto3>=1.26
+  Downloading boto3-1.34.80-py3-none-any.whl (139 kB)
+     |████████████████████████████████| 139 kB 877 kB/s 
+Collecting cppimport>=22.07.17
+  Downloading cppimport-22.8.2.tar.gz (26 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+    Preparing wheel metadata ... done
+Collecting ipynbname>=2021.3.2
+  Downloading ipynbname-2023.2.0.0-py3-none-any.whl (4.3 kB)
+Collecting nbformat>=5.7.3
+  Downloading nbformat-5.10.4-py3-none-any.whl (78 kB)
+     |████████████████████████████████| 78 kB 1.1 MB/s 
+Collecting python-rapidjson>=0.9.1
+  Downloading python_rapidjson-1.16-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+     |████████████████████████████████| 1.7 MB 1.2 MB/s 
+Requirement already satisfied: networkx in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1+cpu->-r requirements.txt (line 19)) (3.1)
+Requirement already satisfied: jinja2 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1+cpu->-r requirements.txt (line 19)) (3.1.3)
+Requirement already satisfied: sympy in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1+cpu->-r requirements.txt (line 19)) (1.12)
+Requirement already satisfied: typing-extensions in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from torch==2.0.1+cpu->-r requirements.txt (line 19)) (4.11.0)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->transformers==4.18.0->-r requirements.txt (line 1)) (2.2.1)
+Requirement already satisfied: idna<4,>=2.5 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->transformers==4.18.0->-r requirements.txt (line 1)) (3.6)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->transformers==4.18.0->-r requirements.txt (line 1)) (3.3.2)
+Requirement already satisfied: certifi>=2017.4.17 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from requests->transformers==4.18.0->-r requirements.txt (line 1)) (2024.2.2)
+Collecting joblib
+  Downloading joblib-1.4.0-py3-none-any.whl (301 kB)
+     |████████████████████████████████| 301 kB 1.5 MB/s 
+Collecting pytz>=2020.1
+  Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+     |████████████████████████████████| 505 kB 1.3 MB/s 
+Collecting tzdata>=2022.1
+  Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+     |████████████████████████████████| 345 kB 1.5 MB/s 
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.4.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (240 kB)
+     |████████████████████████████████| 240 kB 1.7 MB/s 
+Collecting async-timeout<5.0,>=4.0; python_version < "3.11"
+  Downloading async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Collecting yarl<2.0,>=1.0
+  Downloading yarl-1.9.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (308 kB)
+     |████████████████████████████████| 308 kB 1.9 MB/s 
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.0.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (129 kB)
+     |████████████████████████████████| 129 kB 2.0 MB/s 
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting gitdb<5,>=4.0.1
+  Downloading gitdb-4.0.11-py3-none-any.whl (62 kB)
+     |████████████████████████████████| 62 kB 1.4 MB/s 
+Collecting termcolor<3.0,>=2.3
+  Downloading termcolor-2.4.0-py3-none-any.whl (7.7 kB)
+Collecting pycparser
+  Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+     |████████████████████████████████| 117 kB 2.0 MB/s 
+Requirement already satisfied: pillow!=8.3.0 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from pytorch_lightning==1.3.8->horovod[pytorch]==0.24.0->-r requirements.txt (line 13)) (10.3.0)
+Collecting future>=0.17.1
+  Downloading future-1.0.0-py3-none-any.whl (491 kB)
+     |████████████████████████████████| 491 kB 2.3 MB/s 
+Collecting torchmetrics>=0.2.0
+  Downloading torchmetrics-1.3.2-py3-none-any.whl (841 kB)
+     |████████████████████████████████| 841 kB 2.6 MB/s 
+Collecting pyDeprecate==0.3.0
+  Downloading pyDeprecate-0.3.0-py3-none-any.whl (10 kB)
+Collecting tensorboard!=2.5.0,>=2.2.0
+  Downloading tensorboard-2.14.0-py3-none-any.whl (5.5 MB)
+     |████████████████████████████████| 5.5 MB 1.2 MB/s 
+Collecting colorama<0.4.5,>=0.2.5
+  Downloading colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+Collecting s3transfer<0.11.0,>=0.10.0
+  Downloading s3transfer-0.10.1-py3-none-any.whl (82 kB)
+     |████████████████████████████████| 82 kB 414 kB/s 
+Collecting rsa<4.8,>=3.1.2
+  Downloading rsa-4.7.2-py3-none-any.whl (34 kB)
+Collecting docutils<0.17,>=0.10
+  Downloading docutils-0.16-py2.py3-none-any.whl (548 kB)
+     |████████████████████████████████| 548 kB 1.3 MB/s 
+Collecting botocore==1.34.80
+  Downloading botocore-1.34.80-py3-none-any.whl (12.1 MB)
+     |████████████████████████████████| 12.1 MB 1.8 MB/s 
+Collecting jmespath<2.0.0,>=0.7.1
+  Downloading jmespath-1.0.1-py3-none-any.whl (20 kB)
+Collecting pybind11
+  Downloading pybind11-2.12.0-py3-none-any.whl (234 kB)
+     |████████████████████████████████| 234 kB 1.3 MB/s 
+Collecting mako
+  Downloading Mako-1.3.2-py3-none-any.whl (78 kB)
+     |████████████████████████████████| 78 kB 1.5 MB/s 
+Collecting ipykernel
+  Downloading ipykernel-6.29.4-py3-none-any.whl (117 kB)
+     |████████████████████████████████| 117 kB 1.3 MB/s 
+Collecting jupyter-core!=5.0.*,>=4.12
+  Downloading jupyter_core-5.7.2-py3-none-any.whl (28 kB)
+Collecting jsonschema>=2.6
+  Downloading jsonschema-4.21.1-py3-none-any.whl (85 kB)
+     |████████████████████████████████| 85 kB 1.2 MB/s 
+Collecting fastjsonschema>=2.15
+  Downloading fastjsonschema-2.19.1-py3-none-any.whl (23 kB)
+Collecting traitlets>=5.1
+  Downloading traitlets-5.14.2-py3-none-any.whl (85 kB)
+     |████████████████████████████████| 85 kB 906 kB/s 
+Requirement already satisfied: MarkupSafe>=2.0 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from jinja2->torch==2.0.1+cpu->-r requirements.txt (line 19)) (2.1.5)
+Requirement already satisfied: mpmath>=0.19 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from sympy->torch==2.0.1+cpu->-r requirements.txt (line 19)) (1.3.0)
+Collecting smmap<6,>=3.0.1
+  Downloading smmap-5.0.1-py3-none-any.whl (24 kB)
+Collecting lightning-utilities>=0.8.0
+  Downloading lightning_utilities-0.11.2-py3-none-any.whl (26 kB)
+Collecting werkzeug>=1.0.1
+  Downloading werkzeug-3.0.2-py3-none-any.whl (226 kB)
+     |████████████████████████████████| 226 kB 950 kB/s 
+Collecting google-auth-oauthlib<1.1,>=0.5
+  Downloading google_auth_oauthlib-1.0.0-py2.py3-none-any.whl (18 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0
+  Downloading tensorboard_data_server-0.7.2-py3-none-any.whl (2.4 kB)
+Collecting markdown>=2.6.8
+  Downloading Markdown-3.6-py3-none-any.whl (105 kB)
+     |████████████████████████████████| 105 kB 1.3 MB/s 
+Requirement already satisfied: wheel>=0.26 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from tensorboard!=2.5.0,>=2.2.0->pytorch_lightning==1.3.8->horovod[pytorch]==0.24.0->-r requirements.txt (line 13)) (0.34.2)
+Collecting google-auth<3,>=1.6.3
+  Downloading google_auth-2.29.0-py2.py3-none-any.whl (189 kB)
+     |████████████████████████████████| 189 kB 1.4 MB/s 
+Requirement already satisfied: setuptools>=41.0.0 in /home/afrah/venvs/graphcore/poptorch33_env/lib/python3.8/site-packages (from tensorboard!=2.5.0,>=2.2.0->pytorch_lightning==1.3.8->horovod[pytorch]==0.24.0->-r requirements.txt (line 13)) (44.0.0)
+Collecting absl-py>=0.4
+  Downloading absl_py-2.1.0-py3-none-any.whl (133 kB)
+     |████████████████████████████████| 133 kB 951 kB/s 
+Collecting pyasn1>=0.1.3
+  Downloading pyasn1-0.6.0-py2.py3-none-any.whl (85 kB)
+     |████████████████████████████████| 85 kB 1.1 MB/s 
+Collecting matplotlib-inline>=0.1
+  Downloading matplotlib_inline-0.1.6-py3-none-any.whl (9.4 kB)
+Collecting ipython>=7.23.1
+  Downloading ipython-8.12.3-py3-none-any.whl (798 kB)
+     |████████████████████████████████| 798 kB 1.1 MB/s 
+Collecting debugpy>=1.6.5
+  Downloading debugpy-1.8.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+     |████████████████████████████████| 3.1 MB 1.2 MB/s 
+Collecting tornado>=6.1
+  Downloading tornado-6.4-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (435 kB)
+     |████████████████████████████████| 435 kB 1.4 MB/s 
+Collecting pyzmq>=24
+  Downloading pyzmq-25.1.2-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 1.7 MB/s 
+Collecting comm>=0.1.1
+  Downloading comm-0.2.2-py3-none-any.whl (7.2 kB)
+Collecting nest-asyncio
+  Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Collecting jupyter-client>=6.1.12
+  Downloading jupyter_client-8.6.1-py3-none-any.whl (105 kB)
+     |████████████████████████████████| 105 kB 1.9 MB/s 
+Collecting platformdirs>=2.5
+  Downloading platformdirs-4.2.0-py3-none-any.whl (17 kB)
+Collecting jsonschema-specifications>=2023.03.6
+  Downloading jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Collecting rpds-py>=0.7.1
+  Downloading rpds_py-0.18.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 1.9 MB/s 
+Collecting importlib-resources>=1.4.0; python_version < "3.9"
+  Downloading importlib_resources-6.4.0-py3-none-any.whl (38 kB)
+Collecting pkgutil-resolve-name>=1.3.10; python_version < "3.9"
+  Downloading pkgutil_resolve_name-1.3.10-py3-none-any.whl (4.7 kB)
+Collecting referencing>=0.28.4
+  Downloading referencing-0.34.0-py3-none-any.whl (26 kB)
+Collecting requests-oauthlib>=0.7.0
+  Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Collecting importlib-metadata>=4.4; python_version < "3.10"
+  Downloading importlib_metadata-7.1.0-py3-none-any.whl (24 kB)
+Collecting cachetools<6.0,>=2.0.0
+  Downloading cachetools-5.3.3-py3-none-any.whl (9.3 kB)
+Collecting pyasn1-modules>=0.2.1
+  Downloading pyasn1_modules-0.4.0-py3-none-any.whl (181 kB)
+     |████████████████████████████████| 181 kB 2.6 MB/s 
+Collecting prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30
+  Downloading prompt_toolkit-3.0.43-py3-none-any.whl (386 kB)
+     |████████████████████████████████| 386 kB 2.6 MB/s 
+Collecting pygments>=2.4.0
+  Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+     |████████████████████████████████| 1.2 MB 2.8 MB/s 
+Collecting stack-data
+  Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+Collecting pexpect>4.3; sys_platform != "win32"
+  Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+     |████████████████████████████████| 63 kB 2.4 MB/s 
+Collecting pickleshare
+  Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Collecting backcall
+  Downloading backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Collecting decorator
+  Downloading decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Collecting jedi>=0.16
+  Downloading jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+     |████████████████████████████████| 1.6 MB 3.2 MB/s 
+Collecting zipp>=3.1.0; python_version < "3.10"
+  Downloading zipp-3.18.1-py3-none-any.whl (8.2 kB)
+Collecting oauthlib>=3.0.0
+  Downloading oauthlib-3.2.2-py3-none-any.whl (151 kB)
+     |████████████████████████████████| 151 kB 2.5 MB/s 
+Collecting wcwidth
+  Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Collecting pure-eval
+  Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Collecting asttokens>=2.1.0
+  Downloading asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Collecting executing>=1.2.0
+  Downloading executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Collecting ptyprocess>=0.5
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Collecting parso<0.9.0,>=0.8.3
+  Downloading parso-0.8.4-py2.py3-none-any.whl (103 kB)
+     |████████████████████████████████| 103 kB 3.0 MB/s 
+Building wheels for collected packages: tfrecord, mpi4py, horovod, examples-utils, subprocess32, promise, pathtools, cppimport
+  Building wheel for tfrecord (setup.py) ... done
+  Created wheel for tfrecord: filename=tfrecord-1.14.1-py3-none-any.whl size=15641 sha256=805193091a81b06f37713bedc11f1624499ca7852e8cd1d899cdcd70e76555ae
+  Stored in directory: /home/afrah/.cache/pip/wheels/7d/d3/bb/80b8c03f1ce618f07f1fc58622ca540fdfa413e2c67bba0889
+  Building wheel for mpi4py (PEP 517) ... done
+  Created wheel for mpi4py: filename=mpi4py-3.1.3-cp38-cp38-linux_x86_64.whl size=6006676 sha256=452a13d4dd622c5f26c36be21203f91b8f8539756c352869f76401f9a7030c9c
+  Stored in directory: /home/afrah/.cache/pip/wheels/aa/c1/3d/9d4f406c1cefee8cefec7ac511a3147cd6cc39412b27bb5bc5
+  Building wheel for horovod (setup.py) ... done
+  Created wheel for horovod: filename=horovod-0.24.0-cp38-cp38-linux_x86_64.whl size=15680621 sha256=5cca226dff579e9f6db88562e1aa21b5740d242712601eb3a03b99f1d057434e
+  Stored in directory: /home/afrah/.cache/pip/wheels/6c/2a/1e/bd3c605ff301e13dd9af4c09f1bf82616f9b1481765d1c7022
+  Building wheel for examples-utils (setup.py) ... done
+  Created wheel for examples-utils: filename=examples_utils-0.1.0-py3-none-any.whl size=75512 sha256=370af3fe3601cda6923f146df7b0177b0256523a9b09a5e885f36c753c8e5f5d
+  Stored in directory: /mnt/localdata/pip-ephem-wheel-cache-90_7e0xp/wheels/ec/e4/81/935786ba4a2b044dcf0da451ae01b1982d4be675be1b046229
+  Building wheel for subprocess32 (setup.py) ... done
+  Created wheel for subprocess32: filename=subprocess32-3.5.4-py3-none-any.whl size=6489 sha256=0924f5155a0e67c915abcf1462a5df4a37483bfc2e35b6c7ab544a4dca826352
+  Stored in directory: /home/afrah/.cache/pip/wheels/9f/69/d1/50b39b308a87998eaf5c1d9095e5a5bd2ad98501e2b7936d36
+  Building wheel for promise (setup.py) ... done
+  Created wheel for promise: filename=promise-2.3-py3-none-any.whl size=21493 sha256=8f95994a5998b41b02db16475a1c21c1ff8592fb1a9e28299ba5fe65d8552b07
+  Stored in directory: /home/afrah/.cache/pip/wheels/54/aa/01/724885182f93150035a2a91bce34a12877e8067a97baaf5dc8
+  Building wheel for pathtools (setup.py) ... done
+  Created wheel for pathtools: filename=pathtools-0.1.2-py3-none-any.whl size=8784 sha256=292a73bf69a6919c2178d4f4d6c22d6b3dec5bc2d52b8d4a562ec152849f41f3
+  Stored in directory: /home/afrah/.cache/pip/wheels/4c/8e/7e/72fbc243e1aeecae64a96875432e70d4e92f3d2d18123be004
+  Building wheel for cppimport (PEP 517) ... done
+  Created wheel for cppimport: filename=cppimport-22.8.2-py3-none-any.whl size=17618 sha256=6afe4b2b113500bb0adaa24df42320b9390f7d9255ae5ea91889026dfcb1f712
+  Stored in directory: /home/afrah/.cache/pip/wheels/6e/d2/91/94b56e3d502b51c6fb096384d6257632cde02f9a9df23f20c1
+Successfully built tfrecord mpi4py horovod examples-utils subprocess32 promise pathtools cppimport
+ERROR: tensorboard 2.14.0 has requirement protobuf>=3.19.6, but you'll have protobuf 3.19.4 which is incompatible.
+ERROR: botocore 1.34.80 has requirement urllib3<1.27,>=1.25.4; python_version < "3.10", but you'll have urllib3 2.2.1 which is incompatible.
+Installing collected packages: regex, joblib, Click, sacremoses, filelock, packaging, pyyaml, numpy, frozenlist, async-timeout, multidict, yarl, attrs, aiosignal, aiohttp, fsspec, huggingface-hub, tokenizers, transformers, xxhash, dill, multiprocess, responses, pyarrow, six, python-dateutil, pytz, tzdata, pandas, datasets, scipy, protobuf, smmap, gitdb, GitPython, sentry-sdk, subprocess32, promise, pathtools, termcolor, yaspin, shortuuid, docker-pycreds, psutil, configparser, wandb, py, iniconfig, pluggy, toml, pytest, pytest-pythonpath, crc32c, tfrecord, mpi4py, pycparser, cffi, cloudpickle, future, lightning-utilities, torchmetrics, pyDeprecate, werkzeug, oauthlib, requests-oauthlib, cachetools, pyasn1, rsa, pyasn1-modules, google-auth, google-auth-oauthlib, grpcio, tensorboard-data-server, zipp, importlib-metadata, markdown, absl-py, tensorboard, pytorch-lightning, horovod, colorama, jmespath, botocore, s3transfer, docutils, awscli, boto3, pybind11, mako, cppimport, traitlets, platformdirs, jupyter-core, matplotlib-inline, wcwidth, prompt-toolkit, pygments, pure-eval, asttokens, executing, stack-data, ptyprocess, pexpect, pickleshare, backcall, decorator, parso, jedi, ipython, debugpy, tornado, pyzmq, comm, nest-asyncio, jupyter-client, ipykernel, ipynbname, importlib-resources, rpds-py, referencing, jsonschema-specifications, pkgutil-resolve-name, jsonschema, fastjsonschema, nbformat, examples-utils, cmake, python-rapidjson, tritonclient
+  Attempting uninstall: filelock
+    Found existing installation: filelock 3.13.3
+    Uninstalling filelock-3.13.3:
+      Successfully uninstalled filelock-3.13.3
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.24.4
+    Uninstalling numpy-1.24.4:
+      Successfully uninstalled numpy-1.24.4
+Successfully installed Click-8.1.7 GitPython-3.1.43 absl-py-2.1.0 aiohttp-3.9.3 aiosignal-1.3.1 asttokens-2.4.1 async-timeout-4.0.3 attrs-23.2.0 awscli-1.32.80 backcall-0.2.0 boto3-1.34.80 botocore-1.34.80 cachetools-5.3.3 cffi-1.16.0 cloudpickle-3.0.0 cmake-3.22.4 colorama-0.4.4 comm-0.2.2 configparser-6.0.1 cppimport-22.8.2 crc32c-2.4 datasets-2.1.0 debugpy-1.8.1 decorator-5.1.1 dill-0.3.8 docker-pycreds-0.4.0 docutils-0.16 examples-utils-0.1.0 executing-2.0.1 fastjsonschema-2.19.1 filelock-3.11.0 frozenlist-1.4.1 fsspec-2024.3.1 future-1.0.0 gitdb-4.0.11 google-auth-2.29.0 google-auth-oauthlib-1.0.0 grpcio-1.54.2 horovod-0.24.0 huggingface-hub-0.22.2 importlib-metadata-7.1.0 importlib-resources-6.4.0 iniconfig-2.0.0 ipykernel-6.29.4 ipynbname-2023.2.0.0 ipython-8.12.3 jedi-0.19.1 jmespath-1.0.1 joblib-1.4.0 jsonschema-4.21.1 jsonschema-specifications-2023.12.1 jupyter-client-8.6.1 jupyter-core-5.7.2 lightning-utilities-0.11.2 mako-1.3.2 markdown-3.6 matplotlib-inline-0.1.6 mpi4py-3.1.3 multidict-6.0.5 multiprocess-0.70.16 nbformat-5.10.4 nest-asyncio-1.6.0 numpy-1.23.5 oauthlib-3.2.2 packaging-24.0 pandas-2.0.3 parso-0.8.4 pathtools-0.1.2 pexpect-4.9.0 pickleshare-0.7.5 pkgutil-resolve-name-1.3.10 platformdirs-4.2.0 pluggy-1.4.0 promise-2.3 prompt-toolkit-3.0.43 protobuf-3.19.4 psutil-5.9.8 ptyprocess-0.7.0 pure-eval-0.2.2 py-1.11.0 pyDeprecate-0.3.0 pyarrow-15.0.2 pyasn1-0.6.0 pyasn1-modules-0.4.0 pybind11-2.12.0 pycparser-2.22 pygments-2.17.2 pytest-6.2.5 pytest-pythonpath-0.7.4 python-dateutil-2.9.0.post0 python-rapidjson-1.16 pytorch-lightning-1.3.8 pytz-2024.1 pyyaml-5.4.1 pyzmq-25.1.2 referencing-0.34.0 regex-2023.12.25 requests-oauthlib-2.0.0 responses-0.18.0 rpds-py-0.18.0 rsa-4.7.2 s3transfer-0.10.1 sacremoses-0.1.1 scipy-1.5.4 sentry-sdk-1.44.1 shortuuid-1.0.13 six-1.16.0 smmap-5.0.1 stack-data-0.6.3 subprocess32-3.5.4 tensorboard-2.14.0 tensorboard-data-server-0.7.2 termcolor-2.4.0 tfrecord-1.14.1 tokenizers-0.12.1 toml-0.10.2 torchmetrics-1.3.2 tornado-6.4 traitlets-5.14.2 transformers-4.18.0 tritonclient-2.16.0 tzdata-2024.1 wandb-0.12.8 wcwidth-0.2.13 werkzeug-3.0.2 xxhash-3.4.1 yarl-1.9.4 yaspin-2.5.0 zipp-3.18.1
+(poptorch33_env) afrah@gc-poplar-04:~/graphcore/examples/nlp/bert/pytorch$  

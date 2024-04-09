@@ -1,0 +1,270 @@
+afrah@polaris-login-01:~/ai-science-training-series> ssh ALCFUserID@sambanova.alcf.anl.gov
+Warning: Permanently added 'sambanova.alcf.anl.gov,140.221.69.48' (ECDSA) to the list of known hosts.
+Ubuntu 20.04.6 LTS
+Password: 
+
+afrah@polaris-login-01:~/ai-science-training-series> ssh afrah@sambanova.alcf.anl.gov
+Ubuntu 20.04.6 LTS
+Password: 
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-174-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Tue 09 Apr 2024 01:56:51 PM UTC
+
+  System load:  0.0                Processes:               272
+  Usage of /:   30.1% of 23.45GB   Users logged in:         4
+  Memory usage: 29%                IPv4 address for ens192: 10.230.15.229
+  Swap usage:   0%                 IPv4 address for ens224: 140.221.69.48
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+5 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+afrah@sn-login-01:~$
+afrah@sn-login-01:~$ ssh sn30-r4-h1
+The authenticity of host 'sn30-r4-h1 (140.221.82.11)' can't be established.
+ECDSA key fingerprint is SHA256:NoWZ0yp8fe/Fj/B+pImIF6dpC6cMf3paWGuu0Cm40M4.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'sn30-r4-h1,140.221.82.11' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-147-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue 09 Apr 2024 01:58:35 PM UTC
+
+  System load:     1.6                 IPv4 address for snhni0: 140.221.82.11
+  Usage of /:      28.5% of 847.12GB   IPv4 address for snni0:  172.16.0.45
+  Memory usage:    29%                 IPv4 address for snni2:  172.16.0.46
+  Swap usage:      0%                  IPv4 address for snni4:  172.16.0.47
+  Processes:       1933                IPv4 address for snni6:  172.16.0.48
+  Users logged in: 0                   IPv4 address for virbr0: 192.168.122.1
+
+0 updates can be installed immediately.
+0 of these updates are security updates.
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+New release '22.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+#################################### Please note update on 12-20-2023 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Now Running Sambaflow 1.17.7-27
+Acceptance Test scripts are in /data/ANL/scripts.
+Acceptance Test results are in /data/ANL/results.
+
+Older scripts are in /data/ANL/scripts/1.17.4-28
+
+see /data/ANL/scripts/model_all_run.sh  for examples on how to run each test.
+see also /data/ANL/scripts/Readme. 
+
+snfadm will report 8 RDUS.
+In 1.16 for the purpose of slurm there were 16 four tile RDUS.  
+IN 1.17 slurm now thinks that there are 8 RDUs.
+
+sinfo -O AllocNodes,GresUsed,Gres,NodeList
+ALLOCNODES          GRES_USED           GRES                NODELIST            
+oll                 rdu:0,rdu_mem:0,rdu_rdu:8,rdu_mem:104854sn30-r1-h[1-2],sn30-
+
+Now
+If you compile, then by default you will get a pef that
+requires 8 tiles and you should use --gres=rdu:1 with sbatch.
+
+--nchips=2 will get you a pef that uses 8 tiles.
+
+But if you use ---num-tiles=4 you will only use 1/2 an RDU.
+I do not know how to ask for 1/2.
+So you will have to use --gres=rdu:1.
+
+With multi-node slurm please not the gres value is the
+number of RDUs per NODE!
+
+rick weisner
+
+While using bert I discovered that it wanted an environment
+variable named SOFTWARE_HOME defined. This a bug.
+As a best practice please use
+export SOFTWARE_HOME=/opt
+
+Since 1.14 there is no longer a common venv. Each model has its own venv.
+In /opt/sambaflow
+./apps/private/anl/venv
+./apps/micros/venv
+./apps/starters/mlp/venv
+./apps/starters/lenet/venv
+./apps/starters/ffn_mnist/venv
+./apps/starters/logreg/venv
+./apps/starters/upscalenet/venv
+./apps/starters/power_pca/venv
+./apps/image/segmentation_3d/venv
+./apps/image/deepvit/venv
+./apps/image/segmentation/venv
+./apps/image/object_detection/venv
+./apps/image/classification/venv
+./apps/recommender/dlrm/venv
+./apps/recommender/ncf/venv
+./apps/recommender/deepinterest/venv
+./apps/nlp/transformers_on_rdu/venv
+./apps/nlp/transformers_on_rdu/gpt13b/venv
+./apps/nlp/data_processing/venv
+
+If in doubt start with:
+/opt/sambaflow/apps/private/anl/venv
+
+
+These machines should not be rebooted, they should be reset.
+
+power off host
+  ipmitool -I lanplus -H XX.XX.XX.XX -U xxxxx -P YYYYYYYYYY chassis power soft
+login to XRDU0
+  ssh -l UN XX.XX.XX.XX
+Poweroff xrdus
+  xrduutil -U UN -P XXXXXXXXXXXXXXXXXX poweroff
+wait 30 sec
+  sleep 30
+poweron the XRDUs
+  xrduutil -U UN -P XXXXXXXXXXXXX poweron
+  sleep 30
+poweron host
+  ipmitool -I lanplus -H XX.XX.XX.XX -U UN -P YYYYYYYYYY chassis power on  
+
+!!!!!!!!!!!!!!!!!!
+scancel should ran against running jobs.
+scancel.exe should be ran against pending jobs.
+
+
+Additionally, the `---full` option  helps ensure that the signal is sent to every process in the SLURM job. In general, we recommend using these two options with scancel.
+
+scancel --signal=TERM --full
+
+scancel now does TERM by default. If you need the old behavior use scancel.exe.
+#################################### Please note update on 12-20-2023 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Now Running Sambaflow 1.17.7-27
+Acceptance Test scripts are in /data/ANL/scripts.
+Acceptance Test results are in /data/ANL/results.
+
+Older scripts are in /data/ANL/scripts/1.17.4-28
+
+see /data/ANL/scripts/model_all_run.sh  for examples on how to run each test.
+see also /data/ANL/scripts/Readme. 
+
+snfadm will report 8 RDUS.
+In 1.16 for the purpose of slurm there were 16 four tile RDUS.  
+IN 1.17 slurm now thinks that there are 8 RDUs.
+
+sinfo -O AllocNodes,GresUsed,Gres,NodeList
+ALLOCNODES          GRES_USED           GRES                NODELIST            
+oll                 rdu:0,rdu_mem:0,rdu_rdu:8,rdu_mem:104854sn30-r1-h[1-2],sn30-
+
+Now
+If you compile, then by default you will get a pef that
+requires 8 tiles and you should use --gres=rdu:1 with sbatch.
+
+--nchips=2 will get you a pef that uses 8 tiles.
+
+But if you use ---num-tiles=4 you will only use 1/2 an RDU.
+I do not know how to ask for 1/2.
+So you will have to use --gres=rdu:1.
+
+With multi-node slurm please not the gres value is the
+number of RDUs per NODE!
+
+rick weisner
+
+While using bert I discovered that it wanted an environment
+variable named SOFTWARE_HOME defined. This a bug.
+As a best practice please use
+export SOFTWARE_HOME=/opt
+
+Since 1.14 there is no longer a common venv. Each model has its own venv.
+In /opt/sambaflow
+./apps/private/anl/venv
+./apps/micros/venv
+./apps/starters/mlp/venv
+./apps/starters/lenet/venv
+./apps/starters/ffn_mnist/venv
+./apps/starters/logreg/venv
+./apps/starters/upscalenet/venv
+./apps/starters/power_pca/venv
+./apps/image/segmentation_3d/venv
+./apps/image/deepvit/venv
+./apps/image/segmentation/venv
+./apps/image/object_detection/venv
+./apps/image/classification/venv
+./apps/recommender/dlrm/venv
+./apps/recommender/ncf/venv
+./apps/recommender/deepinterest/venv
+./apps/nlp/transformers_on_rdu/venv
+./apps/nlp/transformers_on_rdu/gpt13b/venv
+./apps/nlp/data_processing/venv
+
+If in doubt start with:
+/opt/sambaflow/apps/private/anl/venv
+
+
+These machines should not be rebooted, they should be reset.
+
+power off host
+  ipmitool -I lanplus -H XX.XX.XX.XX -U xxxxx -P YYYYYYYYYY chassis power soft
+login to XRDU0
+  ssh -l UN XX.XX.XX.XX
+Poweroff xrdus
+  xrduutil -U UN -P XXXXXXXXXXXXXXXXXX poweroff
+wait 30 sec
+  sleep 30
+poweron the XRDUs
+  xrduutil -U UN -P XXXXXXXXXXXXX poweron
+  sleep 30
+poweron host
+  ipmitool -I lanplus -H XX.XX.XX.XX -U UN -P YYYYYYYYYY chassis power on  
+
+!!!!!!!!!!!!!!!!!!
+scancel should ran against running jobs.
+scancel.exe should be ran against pending jobs.
+
+
+Additionally, the `---full` option  helps ensure that the signal is sent to every process in the SLURM job. In general, we recommend using these two options with scancel.
+
+scancel --signal=TERM --full
+
+scancel now does TERM by default. If you need the old behavior use scancel.exe.
+afrah@sn30-r4-h1:~$
+afrah@sn30-r4-h1:~$ ls -sh
+total 414M
+4.0K apps      4.0K examplesgit  4.0K graphcoregit  138M Miniconda3-latest-Linux-x86_64.sh    4.0K R_2.1.1  4.0K tmp2
+4.0K checkout  4.0K graphcore    4.0K groqflow      138M Miniconda3-latest-Linux-x86_64.sh.1  4.0K taggit   4.0K v3.3.0
+4.0K clone     4.0K graphcorecd  4.0K miniconda3    138M Miniconda3-latest-Linux-x86_64.sh.2  4.0K tmp      4.0K venvs
+afrah@sn30-r4-h1:~$ git clone https://github.com/argonne-lcf/ai-science-training-series.git/
+Cloning into 'ai-science-training-series'...
+remote: Enumerating objects: 3444, done.
+remote: Counting objects: 100% (397/397), done.
+remote: Compressing objects: 100% (167/167), done.
+remote: Total 3444 (delta 235), reused 370 (delta 226), pack-reused 3047
+Receiving objects: 100% (3444/3444), 335.01 MiB | 81.66 MiB/s, done.
+Resolving deltas: 100% (1753/1753), done.
+Updating files: 100% (415/415), done.
+afrah@sn30-r4-h1:~$ 
+afrah@sn30-r4-h1:~$ cd ai-science-training-series/07_AITestbeds/Sambanova/bert/
+afrah@sn30-r4-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ 
+afrah@sn30-r4-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ chmod +x BertLarge.sh
+afrah@sn30-r4-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ 
+
